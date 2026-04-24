@@ -149,7 +149,7 @@
         </div>
     </div>
 
-    <section id="expertise" class="py-32 bg-kanzlei-bg">
+    <section id="expertise" class="py-32 bg-kanzlei-bg text-kanzlei-dark">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
                 <div>
@@ -158,63 +158,138 @@
                         Notre cabinet se concentre exclusivement sur les domaines juridiques qui constituent le fondement des structures patrimoniales privées et professionnelles.
                     </p>
                 </div>
-                <a href="#" class="corp-link font-semibold uppercase text-sm tracking-widest text-kanzlei-greenLight">Voir tous les domaines &rarr;</a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-kanzlei-stone border border-kanzlei-stone">
-                <div class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col">
+                
+                <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col relative">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
-                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Droit des Successions</h3>
-                    <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">
-                        Conseil complet en matière de succession, droit à la réserve héréditaire, procédures de certificat d'héritier et représentation dans les litiges successoraux.
-                    </p>
-                    <span class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
-                        Détails <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </span>
+                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Successions</h3>
+                    <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">Conseil complet en matière de succession, droit à la réserve héréditaire et litiges successoraux.</p>
+                    <button @click="open = true" class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">Détails &rarr;</button>
+
+                    <template x-teleport="body">
+                        <div x-show="open" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-kanzlei-dark/90 backdrop-blur-sm" x-transition>
+                            <div @click.away="open = false" class="bg-white max-w-2xl w-full p-8 lg:p-12 shadow-2xl relative border-l-4 border-kanzlei-greenLight">
+                                <button @click="open = false" class="absolute top-6 right-6 text-kanzlei-charcoal hover:text-kanzlei-greenLight"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                                <h3 class="font-serif text-3xl mb-6 text-kanzlei-dark">Droit des Successions</h3>
+                                <div class="text-kanzlei-charcoal leading-relaxed space-y-4 font-light">
+                                    <p>Nous vous accompagnons dans la planification stratégique de votre succession et la défense de vos droits.</p>
+                                    <ul class="list-disc pl-5 space-y-2">
+                                        <li>Rédaction de Testaments & Contrats Successoraux</li>
+                                        <li>Droit à la Réserve & Rapports à la Masse</li>
+                                        <li>Partage de l'Indivision Successorale</li>
+                                        <li>Transmission d'Entreprise</li>
+                                    </ul>
+                                    <div class="pt-6"><a href="#kontakt" @click="open = false" class="bg-kanzlei-green text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-kanzlei-greenLight hover:text-kanzlei-dark transition-all">Demander Conseil</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
                 </div>
                 
-                <div class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col">
+                <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col relative">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
                     <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Droit de la Famille</h3>
-                    <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">
-                        Accompagnement stratégique lors de divorces, procédures de pension alimentaire, compensation des acquêts et rédaction de contrats de mariage.
-                    </p>
-                    <span class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
-                        Détails <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </span>
+                    <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">Accompagnement lors de divorces, procédures de pension alimentaire et rédaction de contrats de mariage.</p>
+                    <button @click="open = true" class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">Détails &rarr;</button>
+
+                    <template x-teleport="body">
+                        <div x-show="open" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-kanzlei-dark/90 backdrop-blur-sm" x-transition>
+                            <div @click.away="open = false" class="bg-white max-w-2xl w-full p-8 lg:p-12 shadow-2xl relative border-l-4 border-kanzlei-greenLight">
+                                <button @click="open = false" class="absolute top-6 right-6 text-kanzlei-charcoal hover:text-kanzlei-greenLight"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                                <h3 class="font-serif text-3xl mb-6 text-kanzlei-dark">Droit de la Famille</h3>
+                                <div class="text-kanzlei-charcoal leading-relaxed space-y-4 font-light">
+                                    <p>En droit de la famille, nous allions rigueur juridique et sensibilité face aux situations délicates.</p>
+                                    <ul class="list-disc pl-5 space-y-2">
+                                        <li>Procédures de Divorce & Conséquences de la Séparation</li>
+                                        <li>Calcul des Pensions Alimentaires</li>
+                                        <li>Liquidation du Régime Matrimonial & Acquêts</li>
+                                        <li>Rédaction de Contrats de Mariage Personnalisés</li>
+                                    </ul>
+                                    <div class="pt-6"><a href="#kontakt" @click="open = false" class="bg-kanzlei-green text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-kanzlei-greenLight hover:text-kanzlei-dark transition-all">Prendre Rendez-vous</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
                 </div>
 
-                <div class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col">
+                <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col relative">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
-                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Exécution Testamentaire</h3>
-                    <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">
-                        Gestion certifiée et liquidation de successions complexes pour assurer la paix familiale et la protection du patrimoine.
-                    </p>
-                    <span class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
-                        Détails <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </span>
+                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Exécution Test.</h3>
+                    <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">Gestion certifiée et liquidation de successions complexes pour assurer la paix familiale.</p>
+                    <button @click="open = true" class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">Détails &rarr;</button>
+
+                    <template x-teleport="body">
+                        <div x-show="open" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-kanzlei-dark/90 backdrop-blur-sm" x-transition>
+                            <div @click.away="open = false" class="bg-white max-w-2xl w-full p-8 lg:p-12 shadow-2xl relative border-l-4 border-kanzlei-greenLight">
+                                <button @click="open = false" class="absolute top-6 right-6 text-kanzlei-charcoal hover:text-kanzlei-greenLight"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                                <h3 class="font-serif text-3xl mb-6 text-kanzlei-dark">Exécution Testamentaire</h3>
+                                <div class="text-kanzlei-charcoal leading-relaxed space-y-4 font-light">
+                                    <p>En tant qu'exécuteurs testamentaires certifiés, nous garantissons la mise en œuvre exacte de vos volontés.</p>
+                                    <ul class="list-disc pl-5 space-y-2">
+                                        <li>Exécution de Liquidation du Patrimoine</li>
+                                        <li>Exécution de Gestion pour Héritiers Mineurs</li>
+                                        <li>Gestion Professionnelle de Patrimoine Immobilier</li>
+                                        <li>Éviter les Conflits au sein de l'Indivision</li>
+                                    </ul>
+                                    <div class="pt-6"><a href="#kontakt" @click="open = false" class="bg-kanzlei-green text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-kanzlei-greenLight hover:text-kanzlei-dark transition-all">Expertise Conseil</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
                 </div>
 
-                <div class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col">
+                <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col relative">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
                     <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Médiation</h3>
-                    <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">
-                        Résolution extrajudiciaire structurée de conflits (médiation successorale, médiation pour personnes âgées) afin de préserver les relations professionnelles et privées.
-                    </p>
-                    <span class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
-                        Détails <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </span>
+                    <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">Résolution extrajudiciaire de conflits (Médiation successorale, Médiation des aînés) pour préserver les relations.</p>
+                    <button @click="open = true" class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">Détails &rarr;</button>
+
+                    <template x-teleport="body">
+                        <div x-show="open" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-kanzlei-dark/90 backdrop-blur-sm" x-transition>
+                            <div @click.away="open = false" class="bg-white max-w-2xl w-full p-8 lg:p-12 shadow-2xl relative border-l-4 border-kanzlei-greenLight">
+                                <button @click="open = false" class="absolute top-6 right-6 text-kanzlei-charcoal hover:text-kanzlei-greenLight"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                                <h3 class="font-serif text-3xl mb-6 text-kanzlei-dark">Médiation Civile & Commerciale</h3>
+                                <div class="text-kanzlei-charcoal leading-relaxed space-y-4 font-light">
+                                    <p>Tout conflit ne doit pas forcément finir au tribunal. La médiation offre un espace sécurisé pour des solutions durables.</p>
+                                    <ul class="list-disc pl-5 space-y-2">
+                                        <li>Médiation Successorale (tensions familiales)</li>
+                                        <li>Elder Mediation (conflits liés au grand âge/dépendance)</li>
+                                        <li>Identification des intérêts communs</li>
+                                        <li>Protocoles d'accord juridiquement valides</li>
+                                    </ul>
+                                    <div class="pt-6"><a href="#kontakt" @click="open = false" class="bg-kanzlei-green text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-kanzlei-greenLight hover:text-kanzlei-dark transition-all">Demander Médiation</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
                 </div>
                 
-                <div class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col lg:col-span-2">
+                <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col lg:col-span-2 relative">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
-                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Prévoyance & Transmission de Patrimoine</h3>
-                    <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow max-w-2xl">
-                        Rédaction juridiquement infaillible de directives anticipées, de mandats de protection future et de contrats intergénérationnels pour garantir les actifs privés et professionnels.
-                    </p>
-                    <span class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
-                        Détails <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </span>
+                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Prévoyance & Transmission</h3>
+                    <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow max-w-2xl">Rédaction de directives anticipées, mandats de protection future et contrats intergénérationnels pour la protection des actifs.</p>
+                    <button @click="open = true" class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">Détails &rarr;</button>
+
+                    <template x-teleport="body">
+                        <div x-show="open" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-kanzlei-dark/90 backdrop-blur-sm" x-transition>
+                            <div @click.away="open = false" class="bg-white max-w-2xl w-full p-8 lg:p-12 shadow-2xl relative border-l-4 border-kanzlei-greenLight">
+                                <button @click="open = false" class="absolute top-6 right-6 text-kanzlei-charcoal hover:text-kanzlei-greenLight"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                                <h3 class="font-serif text-3xl mb-6 text-kanzlei-dark">Planification de Prévoyance</h3>
+                                <div class="text-kanzlei-charcoal leading-relaxed space-y-4 font-light">
+                                    <p>L'autodétermination n'est pas une question d'âge. Nous vous aidons à fixer le cap dès aujourd'hui.</p>
+                                    <ul class="list-disc pl-5 space-y-2">
+                                        <li>Mandats de Protection Future & Procurations</li>
+                                        <li>Directives Anticipées conformes à la jurisprudence</li>
+                                        <li>Stratégies d'Asset Protection</li>
+                                        <li>Transfert de Biens Immobiliers (Réserve d'usufruit)</li>
+                                    </ul>
+                                    <div class="pt-6"><a href="#kontakt" @click="open = false" class="bg-kanzlei-green text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-kanzlei-greenLight hover:text-kanzlei-dark transition-all">Bilan Prévoyance</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
                 </div>
             </div>
         </div>
