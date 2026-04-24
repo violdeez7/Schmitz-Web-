@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anfahrt & Standort | Yvonne Schmitz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { kanzlei: { green: '#585A59', greenLight: '#C5D800', warmGrey: '#EBE8E3', stone: '#D9D6D0', dark: '#111111', bg: '#FBFBFA' } },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-kanzlei-bg font-sans antialiased text-kanzlei-dark">
+    <nav class="p-6 border-b border-kanzlei-stone bg-white">
+        <div class="max-w-[1400px] mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-kanzlei-green flex items-center justify-center text-kanzlei-greenLight font-bold text-xl">S</div>
+                <span class="font-bold tracking-widest text-lg uppercase">Schmitz</span>
+            </a>
+            <a href="index.html" class="text-xs uppercase tracking-widest font-bold border-b border-kanzlei-dark pb-1">Zurück zur Startseite</a>
+        </div>
+    </nav>
+
+    <main class="max-w-[1400px] mx-auto px-6 py-20">
+        <div class="flex flex-col lg:flex-row gap-16">
+            <div class="w-full lg:w-1/3">
+                <h1 class="font-serif text-5xl mb-8">Standort</h1>
+                <p class="text-[10px] uppercase tracking-widest font-bold text-kanzlei-green mb-2">Kanzlei Saarbrücken</p>
+                <div class="space-y-6 mb-12">
+                    <p class="text-2xl leading-relaxed">Gutenbergstraße 13<br>66117 Saarbrücken</p>
+                    <div class="pt-6 border-t border-kanzlei-stone text-sm font-light text-kanzlei-charcoal">
+                        <p class="font-bold uppercase text-[10px] mb-2">Parkmöglichkeiten</p>
+                        <p>Parkplätze finden Sie direkt in der Gutenbergstraße sowie in den umliegenden Parkhäusern der Innenstadt.</p>
+                    </div>
+                </div>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Gutenbergstraße+13+66117+Saarbrücken" target="_blank" class="inline-block bg-kanzlei-dark text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-kanzlei-greenLight hover:text-kanzlei-dark transition-all">Route planen</a>
+            </div>
+            <div class="w-full lg:w-2/3 h-[600px] bg-kanzlei-stone shadow-2xl relative">
+                <iframe class="absolute inset-0 w-full h-full grayscale-[50%] hover:grayscale-0 transition-all duration-700" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.242784523315!2d6.985959999999999!3d49.23389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4795b3bc131a0dd9%3A0xb35b45ec9d335b52!2sGutenbergstra%C3%9Fe%2013%2C%2066117%20Saarbrücken!5e0!3m2!1sde!2sde!4v1715600000000!5m2!1sde!2sde" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
