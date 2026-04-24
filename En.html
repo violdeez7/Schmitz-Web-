@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="de" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yvonne Schmitz | Kanzlei für Erbrecht & Familienrecht</title>
+    <title>Yvonne Schmitz | Law Firm for Inheritance & Family Law</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -19,8 +19,8 @@
                 extend: {
                     colors: {
                         kanzlei: {
-                            green: '#585A59', /* Dein Logo Dunkelgrau */
-                            greenLight: '#C5D800', /* Dein Signatur Limettengrün */
+                            green: '#585A59', /* Logo Dark Grey */
+                            greenLight: '#C5D800', /* Signature Lime Green */
                             warmGrey: '#EBE8E3', 
                             stone: '#D9D6D0', 
                             dark: '#111111', 
@@ -38,15 +38,12 @@
     </script>
     <style>
         body { background-color: #FBFBFA; color: #111111; }
-        /* Corporate hover effect for links */
         .corp-link { position: relative; text-decoration: none; }
         .corp-link::after {
             content: ''; position: absolute; width: 100%; height: 1px; bottom: -2px; left: 0;
             background-color: currentColor; transform: scaleX(0); transform-origin: bottom right; transition: transform 0.3s ease-out;
         }
         .corp-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
-        
-        /* Strict borders for institutional look */
         .grid-borders { border-top: 1px solid #D9D6D0; border-left: 1px solid #D9D6D0; }
         .grid-borders > div { border-right: 1px solid #D9D6D0; border-bottom: 1px solid #D9D6D0; }
     </style>
@@ -55,17 +52,17 @@
 
     <div class="bg-kanzlei-dark text-white/70 text-xs py-2 px-6 lg:px-12 flex justify-between items-center hidden md:flex font-medium tracking-wide">
         <div class="flex gap-6">
-            <a href="#" class="hover:text-white transition-colors">Mandanten-Portal</a>
-            <a href="#" class="hover:text-white transition-colors">Karriere</a>
-            <a href="#" class="hover:text-white transition-colors">Standort Saarbrücken</a>
+            <a href="#" class="hover:text-white transition-colors">Client Portal</a>
+            <a href="#" class="hover:text-white transition-colors">Careers</a>
+            <a href="#" class="hover:text-white transition-colors">Saarbrücken Office</a>
         </div>
         <div class="flex gap-6 items-center">
             <a href="tel:+4906819543570" class="hover:text-white transition-colors">T: +49 (0) 681 9543570</a>
             <span class="w-px h-3 bg-white/20"></span>
             <div class="flex gap-3 uppercase">
-                <a href="#" class="text-white">DE</a>
-                <a href="#" class="hover:text-white transition-colors">EN</a>
-                <a href="#" class="hover:text-white transition-colors">FR</a>
+                <a href="/" class="text-white/50 hover:text-white transition-colors">DE</a>
+                <a href="/en.html" class="text-white font-bold">EN</a>
+                <a href="/fr.html" class="text-white/50 hover:text-white transition-colors">FR</a>
             </div>
         </div>
     </div>
@@ -79,17 +76,17 @@
                     </div>
                     <div class="flex flex-col">
                         <span class="font-serif text-2xl tracking-wide text-kanzlei-dark leading-none mb-1">Yvonne Schmitz</span>
-                        <span class="text-[10px] uppercase tracking-[0.25em] text-kanzlei-charcoal font-semibold">Rechtsanwälte</span>
+                        <span class="text-[10px] uppercase tracking-[0.25em] text-kanzlei-charcoal font-semibold">Attorneys at Law</span>
                     </div>
                 </a>
                 
                 <nav class="hidden lg:flex items-center gap-10 text-sm font-semibold tracking-wide uppercase text-kanzlei-charcoal">
                     <a href="#expertise" class="corp-link hover:text-kanzlei-greenLight">Expertise</a>
-                    <a href="#anwaeltin" class="corp-link hover:text-kanzlei-greenLight">Die Anwältin</a>
+                    <a href="#anwaeltin" class="corp-link hover:text-kanzlei-greenLight">The Attorney</a>
                     <a href="#insights" class="corp-link hover:text-kanzlei-greenLight">Insights</a>
                     <a href="#digital-intake" class="corp-link hover:text-kanzlei-greenLight">Legal Intake</a>
                     <a href="#kontakt" class="bg-kanzlei-greenLight text-kanzlei-dark font-bold px-6 py-3 hover:bg-kanzlei-green hover:text-white transition-colors flex items-center gap-2">
-                        Kontakt
+                        Contact
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </nav>
@@ -104,20 +101,20 @@
             <div class="max-w-3xl">
                 <div class="flex items-center gap-4 mb-8">
                     <div class="h-px w-16 bg-kanzlei-warmGrey"></div>
-                    <span class="text-xs uppercase tracking-[0.2em] text-kanzlei-warmGrey font-medium">Kompetenz seit über 30 Jahren</span>
+                    <span class="text-xs uppercase tracking-[0.2em] text-kanzlei-warmGrey font-medium">Over 30 Years of Excellence</span>
                 </div>
                 <h1 class="font-serif text-5xl lg:text-7xl leading-[1.05] mb-8">
-                    Strategische <br>Exzellenz in Erbrecht & Familienrecht.
+                    Strategic <br>Excellence in Inheritance & Family Law.
                 </h1>
                 <p class="text-lg lg:text-xl font-light text-white/80 leading-relaxed mb-12 max-w-2xl">
-                    Wir vertreten komplexe familiäre und vermögensrechtliche Interessen mit höchster juristischer Präzision. Diskret, fundiert und lösungsorientiert am Wirtschaftsstandort Saarbrücken.
+                    We represent complex family and property interests with the highest legal precision. Discreet, well-founded, and solution-oriented in the business hub of Saarbrücken.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-6">
                     <a href="#digital-intake" class="bg-white text-kanzlei-dark font-bold text-sm tracking-widest uppercase px-8 py-4 hover:bg-kanzlei-warmGrey transition-colors text-center">
-                        Mandat Evaluieren
+                        Evaluate Case
                     </a>
                     <a href="#expertise" class="border border-white/30 text-white font-semibold text-sm tracking-widest uppercase px-8 py-4 hover:bg-white/10 transition-colors text-center">
-                        Unsere Expertise
+                        Our Expertise
                     </a>
                 </div>
             </div>
@@ -128,19 +125,19 @@
         <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-4 grid-borders">
             <div class="p-8 lg:p-10 flex flex-col justify-center">
                 <span class="font-serif text-4xl text-kanzlei-greenLight mb-2">30+</span>
-                <span class="text-xs uppercase tracking-widest font-semibold text-kanzlei-charcoal">Jahre Praxis</span>
+                <span class="text-xs uppercase tracking-widest font-semibold text-kanzlei-charcoal">Years of Practice</span>
             </div>
             <div class="p-8 lg:p-10 flex flex-col justify-center">
-                <span class="font-serif text-2xl text-kanzlei-dark mb-2">Erbrecht</span>
-                <span class="text-xs uppercase tracking-widest font-semibold text-kanzlei-charcoal">Fachanwaltschaft</span>
+                <span class="font-serif text-2xl text-kanzlei-dark mb-2">Inheritance Law</span>
+                <span class="text-xs uppercase tracking-widest font-semibold text-kanzlei-charcoal">Certified Specialist</span>
             </div>
             <div class="p-8 lg:p-10 flex flex-col justify-center">
-                <span class="font-serif text-2xl text-kanzlei-dark mb-2">Familienrecht</span>
-                <span class="text-xs uppercase tracking-widest font-semibold text-kanzlei-charcoal">Fachanwaltschaft</span>
+                <span class="font-serif text-2xl text-kanzlei-dark mb-2">Family Law</span>
+                <span class="text-xs uppercase tracking-widest font-semibold text-kanzlei-charcoal">Certified Specialist</span>
             </div>
             <div class="p-8 lg:p-10 flex flex-col justify-center">
-                <span class="font-serif text-2xl text-kanzlei-dark mb-2">Zertifiziert</span>
-                <span class="text-xs uppercase tracking-widest font-semibold text-kanzlei-charcoal">Testamentsvollstreckung</span>
+                <span class="font-serif text-2xl text-kanzlei-dark mb-2">Certified</span>
+                <span class="text-xs uppercase tracking-widest font-semibold text-kanzlei-charcoal">Executor of Wills</span>
             </div>
         </div>
     </div>
@@ -149,20 +146,20 @@
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
                 <div>
-                    <h2 class="font-serif text-4xl lg:text-5xl text-kanzlei-dark mb-6">Expertise & Praxisgruppen</h2>
+                    <h2 class="font-serif text-4xl lg:text-5xl text-kanzlei-dark mb-6">Expertise & Practice Areas</h2>
                     <p class="text-kanzlei-charcoal max-w-xl text-lg font-light">
-                        Unsere Kanzlei fokussiert sich ausschließlich auf Rechtsgebiete, die das Fundament privater und unternehmerischer Vermögensstrukturen bilden.
+                        Our firm focuses exclusively on legal areas that form the foundation of private and corporate wealth structures.
                     </p>
                 </div>
-                <a href="#" class="corp-link font-semibold uppercase text-sm tracking-widest text-kanzlei-greenLight">Alle Rechtsgebiete ansehen &rarr;</a>
+                <a href="#" class="corp-link font-semibold uppercase text-sm tracking-widest text-kanzlei-greenLight">View All Practice Areas &rarr;</a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-kanzlei-stone border border-kanzlei-stone">
                 <div class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
-                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Erbrecht</h3>
+                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Inheritance Law</h3>
                     <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">
-                        Umfassende Beratung bei Erbfolge, Pflichtteilsrecht, Erbscheinverfahren sowie Vertretung bei Erbauseinandersetzungen.
+                        Comprehensive advice on succession, forced heirship, probate proceedings, and representation in estate disputes.
                     </p>
                     <span class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
                         Details <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
@@ -171,9 +168,9 @@
                 
                 <div class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
-                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Familienrecht</h3>
+                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Family Law</h3>
                     <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">
-                        Strategische Begleitung bei Ehescheidungen, Unterhaltsverfahren, Zugewinnausgleich sowie Gestaltung von Eheverträgen.
+                        Strategic support in divorces, maintenance proceedings, equalization of accrued gains, and drafting of prenuptial agreements.
                     </p>
                     <span class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
                         Details <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
@@ -182,9 +179,9 @@
 
                 <div class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
-                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Testamentsvollstreckung & Nachlass</h3>
+                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Estate Administration</h3>
                     <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">
-                        Zertifizierte Verwaltung und Abwicklung komplexer Nachlässe zur Sicherung des Familienfriedens und Vermögensschutzes.
+                        Certified administration and execution of complex estates to secure family peace and asset protection.
                     </p>
                     <span class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
                         Details <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
@@ -195,7 +192,7 @@
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
                     <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Mediation</h3>
                     <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">
-                        Strukturierte außergerichtliche Konfliktbeilegung (Erbmediation, Elder Mediation) zur Wahrung geschäftlicher und privater Beziehungen.
+                        Structured out-of-court dispute resolution (inheritance mediation, elder mediation) to preserve business and private relationships.
                     </p>
                     <span class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
                         Details <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
@@ -204,9 +201,9 @@
                 
                 <div class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col lg:col-span-2">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
-                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Vorsorge & Vermögensnachfolge</h3>
+                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Precautionary & Wealth Succession</h3>
                     <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow max-w-2xl">
-                        Juristisch wasserdichte Erstellung von Patientenverfügungen, Vorsorgevollmachten und Generationenverträgen zur Absicherung von Privat- und Unternehmensvermögen.
+                        Legally watertight drafting of living wills, durable powers of attorney, and generational contracts to safeguard private and corporate assets.
                     </p>
                     <span class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
                         Details <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
@@ -223,56 +220,48 @@
                 <div class="lg:col-span-5 relative">
                     <div class="aspect-[3/4] bg-kanzlei-warmGrey relative overflow-hidden flex items-center justify-center border border-kanzlei-stone">
                         <div class="text-kanzlei-charcoal/40 font-serif uppercase tracking-widest text-sm text-center px-4">
-                            [ Offizielles Kanzlei-Portrait <br> Yvonne Schmitz ]
+                            [ Official Firm Portrait <br> Yvonne Schmitz ]
                         </div>
                         <div class="absolute inset-0 bg-kanzlei-green mix-blend-multiply opacity-5"></div>
                     </div>
                     <div class="absolute -bottom-6 -right-6 bg-kanzlei-green text-white p-8 max-w-[280px] shadow-xl hidden md:block">
                         <p class="font-serif italic text-lg leading-snug">
-                            "Rechtliche Klarheit ist die Voraussetzung für zukunftssichere Entscheidungen."
+                            "Legal clarity is the prerequisite for future-proof decisions."
                         </p>
                     </div>
                 </div>
 
                 <div class="lg:col-span-7 lg:py-12">
                     <h2 class="font-serif text-4xl lg:text-5xl text-kanzlei-dark mb-8">Yvonne Schmitz</h2>
-                    <h3 class="text-lg font-medium text-kanzlei-greenLight mb-8 uppercase tracking-widest">Inhaberin & Fachanwältin</h3>
+                    <h3 class="text-lg font-medium text-kanzlei-greenLight mb-8 uppercase tracking-widest">Owner & Certified Specialist Lawyer</h3>
                     
                     <div class="prose prose-lg text-kanzlei-charcoal font-light leading-relaxed mb-12">
                         <p>
-                            Rechtsanwältin Yvonne Schmitz gehört zu den etablierten rechtlichen Beratern im Saarland im Bereich des Zivilrechts, mit striktem Fokus auf Erb- und Familienrecht. Seit mehr als 30 Jahren vertritt sie die Interessen ihrer Mandanten – von vermögenden Privatpersonen bis hin zu Unternehmerfamilien.
+                            Attorney Yvonne Schmitz is one of the established legal advisors in Saarland in the field of civil law, with a strict focus on inheritance and family law. For more than 30 years, she has represented the interests of her clients – from wealthy private individuals to entrepreneurial families.
                         </p>
                         <p>
-                            Die doppelte Qualifikation als Fachanwältin für Erbrecht und Familienrecht ermöglicht eine ganzheitliche rechtliche Betrachtung an den Schnittstellen, an denen privates Vermögen und familiäre Strukturen aufeinandertreffen. Als zertifizierte Testamentsvollstreckerin und ausgebildete Mediatorin verfügt sie über ein weites Instrumentarium zur Durchsetzung und Sicherung von Mandanteninteressen – sowohl forensisch vor Gericht als auch in komplexen Verhandlungen.
+                            Her dual qualification as a certified specialist lawyer for inheritance law and family law enables a holistic legal assessment at the intersections where private wealth and family structures meet. As a certified executor and trained mediator, she possesses a broad toolkit for enforcing and securing client interests – both forensically in court and in complex negotiations.
                         </p>
                     </div>
 
                     <div class="border-t border-kanzlei-stone pt-8">
-                        <h4 class="text-sm uppercase tracking-widest font-semibold text-kanzlei-dark mb-6">Qualifikationen & Zulassungen</h4>
+                        <h4 class="text-sm uppercase tracking-widest font-semibold text-kanzlei-dark mb-6">Qualifications & Admissions</h4>
                         <ul class="space-y-4">
                             <li class="flex items-start gap-4">
                                 <div class="mt-1 w-1.5 h-1.5 bg-kanzlei-greenLight rounded-full"></div>
-                                <div>
-                                    <span class="block font-semibold text-kanzlei-dark">Fachanwältin für Erbrecht</span>
-                                </div>
+                                <div><span class="block font-semibold text-kanzlei-dark">Certified Specialist in Inheritance Law</span></div>
                             </li>
                             <li class="flex items-start gap-4">
                                 <div class="mt-1 w-1.5 h-1.5 bg-kanzlei-greenLight rounded-full"></div>
-                                <div>
-                                    <span class="block font-semibold text-kanzlei-dark">Fachanwältin für Familienrecht</span>
-                                </div>
+                                <div><span class="block font-semibold text-kanzlei-dark">Certified Specialist in Family Law</span></div>
                             </li>
                             <li class="flex items-start gap-4">
                                 <div class="mt-1 w-1.5 h-1.5 bg-kanzlei-greenLight rounded-full"></div>
-                                <div>
-                                    <span class="block font-semibold text-kanzlei-dark">Zertifizierte Testamentsvollstreckerin</span>
-                                </div>
+                                <div><span class="block font-semibold text-kanzlei-dark">Certified Executor of Wills</span></div>
                             </li>
                             <li class="flex items-start gap-4">
                                 <div class="mt-1 w-1.5 h-1.5 bg-kanzlei-greenLight rounded-full"></div>
-                                <div>
-                                    <span class="block font-semibold text-kanzlei-dark">Mediatorin (Familien-, Erb- & Seniorenmediation)</span>
-                                </div>
+                                <div><span class="block font-semibold text-kanzlei-dark">Mediator (Family, Inheritance & Elder Mediation)</span></div>
                             </li>
                         </ul>
                     </div>
@@ -285,32 +274,32 @@
     <section id="insights" class="py-32 bg-kanzlei-bg">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="flex justify-between items-end border-b border-kanzlei-dark pb-6 mb-12">
-                <h2 class="font-serif text-4xl text-kanzlei-dark">Rechtliche Insights & Publikationen</h2>
-                <a href="#" class="corp-link font-semibold uppercase text-sm tracking-widest text-kanzlei-dark">Zum Kanzlei-Journal &rarr;</a>
+                <h2 class="font-serif text-4xl text-kanzlei-dark">Legal Insights & Publications</h2>
+                <a href="#" class="corp-link font-semibold uppercase text-sm tracking-widest text-kanzlei-dark">To the Firm Journal &rarr;</a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <article class="group cursor-pointer">
-                    <p class="text-xs uppercase tracking-widest text-kanzlei-greenLight font-semibold mb-3">Erbrecht · 12. Mai 2026</p>
-                    <h3 class="font-serif text-2xl text-kanzlei-dark mb-4 group-hover:text-kanzlei-greenLight transition-colors">Das Berliner Testament und der Fiktive Nachlass: Fallstricke der aktuellen Rechtsprechung</h3>
+                    <p class="text-xs uppercase tracking-widest text-kanzlei-greenLight font-semibold mb-3">Inheritance Law · May 12, 2026</p>
+                    <h3 class="font-serif text-2xl text-kanzlei-dark mb-4 group-hover:text-kanzlei-greenLight transition-colors">The Berlin Will and the Fictitious Estate: Pitfalls of Current Case Law</h3>
                     <p class="text-sm text-kanzlei-charcoal font-light line-clamp-3">
-                        Eine detaillierte Analyse der neuesten BGH-Entscheidungen zur Berechnung von Pflichtteilsergänzungsansprüchen bei lebzeitigen Schenkungen.
+                        A detailed analysis of the latest Federal Court of Justice decisions on calculating claims to augment the compulsory portion in the case of lifetime gifts.
                     </p>
                 </article>
                 
                 <article class="group cursor-pointer">
-                    <p class="text-xs uppercase tracking-widest text-kanzlei-greenLight font-semibold mb-3">Familienrecht · 03. April 2026</p>
-                    <h3 class="font-serif text-2xl text-kanzlei-dark mb-4 group-hover:text-kanzlei-greenLight transition-colors">Zugewinnausgleich bei Unternehmensbeteiligungen in der Scheidung</h3>
+                    <p class="text-xs uppercase tracking-widest text-kanzlei-greenLight font-semibold mb-3">Family Law · April 03, 2026</p>
+                    <h3 class="font-serif text-2xl text-kanzlei-dark mb-4 group-hover:text-kanzlei-greenLight transition-colors">Equalization of Accrued Gains for Corporate Participations in Divorce</h3>
                     <p class="text-sm text-kanzlei-charcoal font-light line-clamp-3">
-                        Wie illiquide Vermögenswerte und GmbH-Anteile rechtssicher im Zuge einer Ehescheidung bewertet und aufgeteilt werden.
+                        How illiquid assets and LLC shares are legally evaluated and divided during a divorce.
                     </p>
                 </article>
 
                 <article class="group cursor-pointer">
-                    <p class="text-xs uppercase tracking-widest text-kanzlei-greenLight font-semibold mb-3">Mediation · 18. März 2026</p>
-                    <h3 class="font-serif text-2xl text-kanzlei-dark mb-4 group-hover:text-kanzlei-greenLight transition-colors">Elder Mediation: Präventive Konfliktlösung bei vorweggenommener Erbfolge</h3>
+                    <p class="text-xs uppercase tracking-widest text-kanzlei-greenLight font-semibold mb-3">Mediation · March 18, 2026</p>
+                    <h3 class="font-serif text-2xl text-kanzlei-dark mb-4 group-hover:text-kanzlei-greenLight transition-colors">Elder Mediation: Preventive Dispute Resolution for Anticipated Succession</h3>
                     <p class="text-sm text-kanzlei-charcoal font-light line-clamp-3">
-                        Warum die Einbindung eines Mediators bei der Übertragung von Immobilienvermögen an die nächste Generation gerichtliche Auseinandersetzungen verhindert.
+                        Why involving a mediator when transferring real estate assets to the next generation prevents legal disputes.
                     </p>
                 </article>
             </div>
@@ -322,24 +311,24 @@
             
             <div>
                 <div class="inline-block border border-white/20 px-4 py-1 text-xs uppercase tracking-widest mb-8">
-                    Sicheres Mandanten-Portal
+                    Secure Client Portal
                 </div>
                 <h2 class="font-serif text-4xl lg:text-5xl mb-6">Digital Legal Intake System.</h2>
                 <p class="text-lg font-light text-white/80 leading-relaxed mb-8 max-w-xl">
-                    Um Ihr Anliegen juristisch präzise zu evaluieren, nutzt unsere Kanzlei ein sicheres digitales Erfassungssystem. Geben Sie die Grunddaten Ihres Falls strukturiert ein, um eine beschleunigte, qualifizierte Ersteinschätzung durch unser Team zu erhalten.
+                    To evaluate your case with legal precision, our firm uses a secure digital intake system. Enter the basic details of your case to receive an expedited, qualified initial assessment from our team.
                 </p>
                 <ul class="space-y-4 text-sm font-medium text-white/80 border-t border-white/10 pt-8 max-w-md">
                     <li class="flex items-center gap-4">
                         <svg class="w-5 h-5 text-kanzlei-greenLight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                        End-to-End Verschlüsselung nach DSGVO
+                        End-to-End GDPR-Compliant Encryption
                     </li>
                     <li class="flex items-center gap-4">
                         <svg class="w-5 h-5 text-kanzlei-greenLight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        Strukturierte Fallaufnahme für Rückruf
+                        Structured Case Intake for Callback
                     </li>
                     <li class="flex items-center gap-4">
                         <svg class="w-5 h-5 text-kanzlei-greenLight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                        Absolute anwaltliche Verschwiegenheit
+                        Absolute Attorney-Client Privilege
                     </li>
                 </ul>
             </div>
@@ -349,13 +338,13 @@
                 <div class="bg-kanzlei-bg border-b border-kanzlei-stone p-5 flex items-center gap-4">
                     <div class="w-10 h-10 bg-kanzlei-green text-kanzlei-greenLight flex items-center justify-center font-serif font-bold text-xl rounded-full">S</div>
                     <div>
-                        <h4 class="font-bold text-sm text-kanzlei-dark">Kanzlei Assistent</h4>
+                        <h4 class="font-bold text-sm text-kanzlei-dark">Legal Assistant</h4>
                         <div class="flex items-center gap-2 text-xs text-kanzlei-charcoal mt-0.5">
                             <span class="relative flex h-2 w-2">
                               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-kanzlei-greenLight opacity-75"></span>
                               <span class="relative inline-flex rounded-full h-2 w-2 bg-kanzlei-greenLight"></span>
                             </span>
-                            Sichere Verbindung aktiv
+                            Secure connection active
                         </div>
                     </div>
                 </div>
@@ -382,9 +371,9 @@
                 <div class="bg-kanzlei-bg border-t border-kanzlei-stone p-4">
                     
                     <div x-show="step === 'select_area'" class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        <button @click="submitArea('Erbrecht')" class="bg-white border border-kanzlei-stone p-3 text-xs uppercase tracking-wider font-semibold rounded-lg hover:border-kanzlei-greenLight hover:bg-kanzlei-greenLight/10 transition-all">Erbrecht</button>
-                        <button @click="submitArea('Familienrecht')" class="bg-white border border-kanzlei-stone p-3 text-xs uppercase tracking-wider font-semibold rounded-lg hover:border-kanzlei-greenLight hover:bg-kanzlei-greenLight/10 transition-all">Familienrecht</button>
-                        <button @click="submitArea('Nachlass / Testamentsvollstreckung')" class="bg-white border border-kanzlei-stone p-3 text-xs uppercase tracking-wider font-semibold rounded-lg hover:border-kanzlei-greenLight hover:bg-kanzlei-greenLight/10 transition-all">Nachlass</button>
+                        <button @click="submitArea('Inheritance Law')" class="bg-white border border-kanzlei-stone p-3 text-xs uppercase tracking-wider font-semibold rounded-lg hover:border-kanzlei-greenLight hover:bg-kanzlei-greenLight/10 transition-all">Inheritance Law</button>
+                        <button @click="submitArea('Family Law')" class="bg-white border border-kanzlei-stone p-3 text-xs uppercase tracking-wider font-semibold rounded-lg hover:border-kanzlei-greenLight hover:bg-kanzlei-greenLight/10 transition-all">Family Law</button>
+                        <button @click="submitArea('Estate Administration')" class="bg-white border border-kanzlei-stone p-3 text-xs uppercase tracking-wider font-semibold rounded-lg hover:border-kanzlei-greenLight hover:bg-kanzlei-greenLight/10 transition-all">Estate Admin</button>
                         <button @click="submitArea('Mediation')" class="bg-white border border-kanzlei-stone p-3 text-xs uppercase tracking-wider font-semibold rounded-lg hover:border-kanzlei-greenLight hover:bg-kanzlei-greenLight/10 transition-all">Mediation</button>
                     </div>
 
@@ -397,16 +386,16 @@
                         
                         <button @click="handleEnter()" 
                                 class="bg-kanzlei-greenLight text-kanzlei-dark font-bold px-6 uppercase text-xs tracking-wider rounded-lg hover:bg-kanzlei-green hover:text-white transition-colors shadow-sm">
-                            Senden
+                            Submit
                         </button>
                     </div>
 
                     <div x-show="step === 'enter_message'" class="flex flex-col gap-3">
-                        <textarea x-model="currentInput" rows="3" placeholder="Kurze Beschreibung (optional)..."
+                        <textarea x-model="currentInput" rows="3" placeholder="Brief description (optional)..."
                                   class="w-full bg-white border border-kanzlei-stone p-3 text-sm text-kanzlei-dark focus:outline-none focus:border-kanzlei-greenLight rounded-lg shadow-sm resize-none"></textarea>
                         <button @click="submitMessage()" 
                                 class="bg-kanzlei-greenLight text-kanzlei-dark font-bold px-6 py-3 uppercase text-xs tracking-wider rounded-lg hover:bg-kanzlei-green hover:text-white transition-colors shadow-sm self-end">
-                            Nachricht Senden
+                            Send Message
                         </button>
                     </div>
                 </div>
@@ -420,10 +409,10 @@
                 <div>
                     <h3 class="font-serif text-2xl text-kanzlei-dark mb-6">Yvonne Schmitz</h3>
                     <p class="text-kanzlei-charcoal font-light text-sm mb-6 leading-relaxed">
-                        Fachanwaltskanzlei für Erbrecht und Familienrecht.<br>
+                        Specialist Law Firm for Inheritance and Family Law.<br>
                         Musterstraße 1<br>
                         66111 Saarbrücken<br>
-                        Deutschland
+                        Germany
                     </p>
                     <div class="flex flex-col gap-2 text-sm font-semibold text-kanzlei-dark">
                         <a href="tel:+4906819543570" class="hover:text-kanzlei-greenLight transition-colors">T: +49 (0) 681 - 9543570</a>
@@ -434,29 +423,29 @@
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-widest text-kanzlei-dark mb-6">Expertise</h4>
                     <ul class="space-y-3 text-sm text-kanzlei-charcoal">
-                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Erbrecht</a></li>
-                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Familienrecht</a></li>
-                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Testamentsvollstreckung</a></li>
-                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Nachlassmanagement</a></li>
-                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Mediation & Cooperative Praxis</a></li>
+                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Inheritance Law</a></li>
+                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Family Law</a></li>
+                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Estate Administration</a></li>
+                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Wealth Succession</a></li>
+                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Mediation & Cooperative Practice</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-xs font-bold uppercase tracking-widest text-kanzlei-dark mb-6">Kanzlei</h4>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-kanzlei-dark mb-6">The Firm</h4>
                     <ul class="space-y-3 text-sm text-kanzlei-charcoal">
-                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Die Anwältin</a></li>
-                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Referenzen & Fälle</a></li>
-                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Publikationen</a></li>
-                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Karriere / Opportunities</a></li>
+                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">The Attorney</a></li>
+                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">References & Cases</a></li>
+                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Publications</a></li>
+                        <li><a href="#" class="hover:text-kanzlei-greenLight transition-colors">Careers / Opportunities</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-widest text-kanzlei-dark mb-6">Legal Alerts</h4>
-                    <p class="text-sm text-kanzlei-charcoal font-light mb-4">Abonnieren Sie unsere Kanzlei-Updates zu aktuellen Urteilen im Erb- und Familienrecht.</p>
+                    <p class="text-sm text-kanzlei-charcoal font-light mb-4">Subscribe to our firm updates on current inheritance and family law rulings.</p>
                     <div class="flex border border-kanzlei-stone rounded-md overflow-hidden">
-                        <input type="email" placeholder="E-Mail Adresse" class="w-full p-3 text-sm bg-white focus:outline-none focus:border-kanzlei-greenLight">
+                        <input type="email" placeholder="Email Address" class="w-full p-3 text-sm bg-white focus:outline-none focus:border-kanzlei-greenLight">
                         <button class="bg-kanzlei-dark text-white px-4 hover:bg-kanzlei-green transition-colors">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </button>
@@ -465,11 +454,11 @@
             </div>
 
             <div class="border-t border-kanzlei-stone pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-kanzlei-charcoal uppercase tracking-wider">
-                <p>&copy; 2026 Schmitz Rechtsanwälte. Alle Rechte vorbehalten.</p>
+                <p>&copy; 2026 Schmitz Law Firm. All rights reserved.</p>
                 <div class="flex gap-6">
-                    <a href="#" class="hover:text-kanzlei-greenLight transition-colors">Impressum</a>
-                    <a href="#" class="hover:text-kanzlei-greenLight transition-colors">Datenschutz</a>
-                    <a href="#" class="hover:text-kanzlei-greenLight transition-colors">Mandatsbedingungen</a>
+                    <a href="#" class="hover:text-kanzlei-greenLight transition-colors">Imprint</a>
+                    <a href="#" class="hover:text-kanzlei-greenLight transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-kanzlei-greenLight transition-colors">Terms of Mandate</a>
                 </div>
             </div>
         </div>
@@ -483,7 +472,7 @@
                 currentInput: '',
                 formData: { area: '', name: '', phone: '', message: '', email: '' },
                 logs: [
-                    { type: 'system', text: 'Herzlich willkommen im digitalen Portal der Kanzlei Schmitz.<br><br>Um uns bestmöglich auf ein Erstgespräch vorzubereiten, bitten wir Sie um ein paar Eckdaten. <strong>Welches Rechtsgebiet betrifft Ihr Anliegen?</strong>' }
+                    { type: 'system', text: 'Welcome to the digital portal of Schmitz Law Firm.<br><br>To best prepare for our initial consultation, we ask for a few key details. <strong>Which area of law does your inquiry relate to?</strong>' }
                 ],
                 
                 async addSystemMessage(text, delay = 1200) {
@@ -500,7 +489,7 @@
                     this.logs.push({ type: 'user', text: choice });
                     this.step = 'waiting';
                     
-                    await this.addSystemMessage(`Vielen Dank. Wie lautet Ihr <strong>Vor- und Nachname</strong>?`);
+                    await this.addSystemMessage(`Thank you. What is your <strong>first and last name</strong>?`);
                     this.step = 'enter_name';
                 },
 
@@ -512,7 +501,7 @@
                     this.step = 'waiting';
                     
                     let firstName = this.formData.name.split(' ')[0];
-                    await this.addSystemMessage(`Guten Tag ${firstName}. Unter welcher <strong>Telefonnummer</strong> können wir Sie für Rückfragen oder eine Terminvereinbarung am besten erreichen?`);
+                    await this.addSystemMessage(`Hello ${firstName}. What is the best <strong>phone number</strong> to reach you at for questions or to schedule an appointment?`);
                     this.step = 'enter_phone';
                 },
 
@@ -523,18 +512,18 @@
                     this.currentInput = '';
                     this.step = 'waiting';
                     
-                    await this.addSystemMessage(`Danke. Bitte schildern Sie uns in 2-3 Sätzen kurz den <strong>Kern Ihres Anliegens</strong>.`);
+                    await this.addSystemMessage(`Thank you. Please briefly describe the <strong>core of your case</strong> in 2-3 sentences.`);
                     this.step = 'enter_message';
                 },
 
                 async submitMessage() {
-                    if(!this.currentInput.trim()) this.currentInput = "Keine Angabe";
+                    if(!this.currentInput.trim()) this.currentInput = "No description provided";
                     this.formData.message = this.currentInput;
                     this.logs.push({ type: 'user', text: this.currentInput });
                     this.currentInput = '';
                     this.step = 'waiting';
                     
-                    await this.addSystemMessage(`Fast geschafft! An welche <strong>E-Mail-Adresse</strong> dürfen wir Ihnen unsere Bestätigung senden?`);
+                    await this.addSystemMessage(`Almost done! To which <strong>email address</strong> may we send our confirmation?`);
                     this.step = 'enter_email';
                 },
 
@@ -545,7 +534,7 @@
                     this.currentInput = '';
                     this.step = 'waiting';
                     
-                    await this.addSystemMessage(`<strong>DATEN ERFOLGREICH ÜBERMITTELT.</strong><br><br>Vielen Dank für Ihr Vertrauen. Unser Sekretariat wird sich zeitnah mit Ihnen in Verbindung setzen. Sie können dieses Fenster nun schließen.`, 2000);
+                    await this.addSystemMessage(`<strong>DATA SUCCESSFULLY SUBMITTED.</strong><br><br>Thank you for your trust. Our secretariat will contact you shortly. You may now close this window.`, 2000);
                     this.step = 'finished';
                 },
 
@@ -556,9 +545,9 @@
                 },
 
                 getPlaceholder() {
-                    if(this.step === 'enter_name') return 'Max Mustermann...';
+                    if(this.step === 'enter_name') return 'John Doe...';
                     if(this.step === 'enter_phone') return '+49 170...';
-                    if(this.step === 'enter_email') return 'ihre.email@adresse.de...';
+                    if(this.step === 'enter_email') return 'your.email@address.com...';
                     return '';
                 },
                 
