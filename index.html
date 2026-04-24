@@ -151,8 +151,7 @@
             </div>
         </div>
     </div>
-
-       <section id="expertise" class="py-32 bg-kanzlei-bg text-kanzlei-dark">
+    <section id="expertise" class="py-32 bg-kanzlei-bg text-kanzlei-dark">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
                 <div>
@@ -178,127 +177,142 @@
                     <template x-teleport="body">
                         <div x-show="open" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-kanzlei-dark/90 backdrop-blur-sm" x-transition>
                             <div @click.away="open = false" class="bg-white max-w-2xl w-full p-8 lg:p-12 shadow-2xl relative border-l-4 border-kanzlei-greenLight">
-                                <button @click="open = false" class="absolute top-6 right-6 text-kanzlei-charcoal hover:text-kanzlei-greenLight">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                                </button>
+                                <button @click="open = false" class="absolute top-6 right-6 text-kanzlei-charcoal hover:text-kanzlei-greenLight"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
                                 <h3 class="font-serif text-3xl mb-6 text-kanzlei-dark">Erbrecht & Nachfolge</h3>
                                 <div class="text-kanzlei-charcoal leading-relaxed space-y-4">
                                     <p>Wir begleiten Sie bei der strategischen Planung Ihrer Nachfolge und der Durchsetzung Ihrer Rechte.</p>
-                                    <ul class="list-disc pl-5 space-y-2">
+                                    <ul class="list-disc pl-5 space-y-2 font-light">
                                         <li>Testamentsgestaltung & Erbverträge</li>
                                         <li>Pflichtteilsrecht & Ergänzungsansprüche</li>
+                                        <li>Auseinandersetzung von Erbengemeinschaften</li>
                                         <li>Unternehmensnachfolge</li>
                                     </ul>
-                                    <div class="pt-6">
-                                        <a href="#kontakt" @click="open = false" class="bg-kanzlei-green text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-kanzlei-greenLight hover:text-kanzlei-dark transition-all">Beratung anfordern</a>
-                                    </div>
+                                    <div class="pt-6"><a href="#kontakt" @click="open = false" class="bg-kanzlei-green text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-kanzlei-greenLight hover:text-kanzlei-dark transition-all">Beratung anfordern</a></div>
                                 </div>
                             </div>
                         </div>
                     </template>
                 </div>
                 
-                <div class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col">
+                <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col relative">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
                     <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Familienrecht</h3>
                     <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">
                         Strategische Begleitung bei Ehescheidungen, Unterhaltsverfahren, Zugewinnausgleich sowie Gestaltung von Eheverträgen.
                     </p>
-                    <span class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">Details &rarr;</span>
+                    <button @click="open = true" class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
+                        Details <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </button>
+
+                    <template x-teleport="body">
+                        <div x-show="open" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-kanzlei-dark/90 backdrop-blur-sm" x-transition>
+                            <div @click.away="open = false" class="bg-white max-w-2xl w-full p-8 lg:p-12 shadow-2xl relative border-l-4 border-kanzlei-greenLight">
+                                <button @click="open = false" class="absolute top-6 right-6 text-kanzlei-charcoal hover:text-kanzlei-greenLight"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                                <h3 class="font-serif text-3xl mb-6 text-kanzlei-dark">Familienrecht</h3>
+                                <div class="text-kanzlei-charcoal leading-relaxed space-y-4">
+                                    <p>Im Familienrecht verbinden wir juristische Konsequenz mit dem nötigen Fingerspitzengefühl für sensible Situationen.</p>
+                                    <ul class="list-disc pl-5 space-y-2 font-light">
+                                        <li>Scheidungsverfahren & Trennungsfolgen</li>
+                                        <li>Berechnung von Unterhaltsansprüchen</li>
+                                        <li>Vermögensauseinandersetzung & Zugewinn</li>
+                                        <li>Gestaltung individueller Eheverträge</li>
+                                    </ul>
+                                    <div class="pt-6"><a href="#kontakt" @click="open = false" class="bg-kanzlei-green text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-kanzlei-greenLight hover:text-kanzlei-dark transition-all">Termin vereinbaren</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
                 </div>
 
-                <div class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col">
+                <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col relative">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
-                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Testamentsvollstreckung</h3>
+                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Nachlassverwaltung</h3>
                     <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">
-                        Zertifizierte Verwaltung und Abwicklung komplexer Nachlässe zur Sicherung des Familienfriedens.
+                        Zertifizierte Verwaltung und Abwicklung komplexer Nachlässe zur Sicherung des Familienfriedens und Vermögensschutzes.
                     </p>
-                    <span class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">Details &rarr;</span>
+                    <button @click="open = true" class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
+                        Details <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </button>
+
+                    <template x-teleport="body">
+                        <div x-show="open" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-kanzlei-dark/90 backdrop-blur-sm" x-transition>
+                            <div @click.away="open = false" class="bg-white max-w-2xl w-full p-8 lg:p-12 shadow-2xl relative border-l-4 border-kanzlei-greenLight">
+                                <button @click="open = false" class="absolute top-6 right-6 text-kanzlei-charcoal hover:text-kanzlei-greenLight"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                                <h3 class="font-serif text-3xl mb-6 text-kanzlei-dark">Testamentsvollstreckung</h3>
+                                <div class="text-kanzlei-charcoal leading-relaxed space-y-4">
+                                    <p>Als zertifizierte Testamentsvollstrecker sichern wir die exakte Umsetzung Ihres letzten Willens und schützen den Nachlass vor Zersplitterung.</p>
+                                    <ul class="list-disc pl-5 space-y-2 font-light">
+                                        <li>Abwicklungsvollstreckung</li>
+                                        <li>Dauertestamentsvollstreckung zum Schutz Minderjähriger</li>
+                                        <li>Professionelle Verwaltung von Immobilienvermögen</li>
+                                        <li>Vermeidung von Streitigkeiten innerhalb der Erbengemeinschaft</li>
+                                    </ul>
+                                    <div class="pt-6"><a href="#kontakt" @click="open = false" class="bg-kanzlei-green text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-kanzlei-greenLight hover:text-kanzlei-dark transition-all">Experten-Gespräch</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
                 </div>
 
-                <div class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col">
+                <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col relative">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
                     <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Mediation</h3>
                     <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">
-                        Strukturierte außergerichtliche Konfliktbeilegung zur Wahrung privater Beziehungen.
+                        Strukturierte außergerichtliche Konfliktbeilegung (Erbmediation, Elder Mediation) zur Wahrung privater Beziehungen.
                     </p>
-                    <span class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">Details &rarr;</span>
+                    <button @click="open = true" class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
+                        Details <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </button>
+
+                    <template x-teleport="body">
+                        <div x-show="open" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-kanzlei-dark/90 backdrop-blur-sm" x-transition>
+                            <div @click.away="open = false" class="bg-white max-w-2xl w-full p-8 lg:p-12 shadow-2xl relative border-l-4 border-kanzlei-greenLight">
+                                <button @click="open = false" class="absolute top-6 right-6 text-kanzlei-charcoal hover:text-kanzlei-greenLight"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                                <h3 class="font-serif text-3xl mb-6 text-kanzlei-dark">Wirtschafts- & Familienmediation</h3>
+                                <div class="text-kanzlei-charcoal leading-relaxed space-y-4">
+                                    <p>Nicht jeder Konflikt muss vor Gericht enden. Mediation bietet einen geschützten Raum für tragfähige Lösungen.</p>
+                                    <ul class="list-disc pl-5 space-y-2 font-light">
+                                        <li>Erbmediation bei verhärteten Fronten</li>
+                                        <li>Elder Mediation (Konflikte rund ums Altern/Pflege)</li>
+                                        <li>Herausarbeitung gemeinsamer Interessen</li>
+                                        <li>Rechtssichere Abschlussvereinbarungen</li>
+                                    </ul>
+                                    <div class="pt-6"><a href="#kontakt" @click="open = false" class="bg-kanzlei-green text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-kanzlei-greenLight hover:text-kanzlei-dark transition-all">Mediation anfragen</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
                 </div>
                 
-                <div class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col lg:col-span-2">
+                <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col lg:col-span-2 relative">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
                     <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Vorsorge & Vermögensnachfolge</h3>
                     <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow max-w-2xl">
-                        Juristisch wasserdichte Erstellung von Patientenverfügungen, Vorsorgevollmachten und Generationenverträgen.
+                        Juristisch wasserdichte Erstellung von Patientenverfügungen, Vorsorgevollmachten und Generationenverträgen zur Absicherung.
                     </p>
-                    <span class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">Details &rarr;</span>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <button @click="open = true" class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
+                        Details <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </button>
 
-    <section id="anwaeltin" class="py-32 bg-white border-y border-kanzlei-stone">
-        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-                
-                <div class="lg:col-span-5 relative">
-                    <div class="aspect-[3/4] bg-kanzlei-warmGrey relative overflow-hidden flex items-center justify-center border border-kanzlei-stone">
-                        <div class="text-kanzlei-charcoal/40 font-serif uppercase tracking-widest text-sm text-center px-4">
-                            [ Offizielles Kanzlei-Portrait <br> Yvonne Schmitz ]
+                    <template x-teleport="body">
+                        <div x-show="open" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-kanzlei-dark/90 backdrop-blur-sm" x-transition>
+                            <div @click.away="open = false" class="bg-white max-w-2xl w-full p-8 lg:p-12 shadow-2xl relative border-l-4 border-kanzlei-greenLight">
+                                <button @click="open = false" class="absolute top-6 right-6 text-kanzlei-charcoal hover:text-kanzlei-greenLight"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                                <h3 class="font-serif text-3xl mb-6 text-kanzlei-dark">Vorsorgeplanung</h3>
+                                <div class="text-kanzlei-charcoal leading-relaxed space-y-4">
+                                    <p>Selbstbestimmung ist keine Frage des Alters. Wir helfen Ihnen, heute die Weichen für morgen zu stellen.</p>
+                                    <ul class="list-disc pl-5 space-y-2 font-light">
+                                        <li>General- und Vorsorgevollmachten</li>
+                                        <li>Patientenverfügungen nach aktueller BGH-Rechtsprechung</li>
+                                        <li>Asset Protection (Schutz des Vermögens)</li>
+                                        <li>Übertragung von Immobilien unter Vorbehaltsrechten (Nießbrauch)</li>
+                                    </ul>
+                                    <div class="pt-6"><a href="#kontakt" @click="open = false" class="bg-kanzlei-green text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-kanzlei-greenLight hover:text-kanzlei-dark transition-all">Vorsorge-Check</a></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="absolute inset-0 bg-kanzlei-green mix-blend-multiply opacity-5"></div>
-                    </div>
-                    <div class="absolute -bottom-6 -right-6 bg-kanzlei-green text-white p-8 max-w-[280px] shadow-xl hidden md:block">
-                        <p class="font-serif italic text-lg leading-snug">
-                            "Rechtliche Klarheit ist die Voraussetzung für zukunftssichere Entscheidungen."
-                        </p>
-                    </div>
+                    </template>
                 </div>
-
-                <div class="lg:col-span-7 lg:py-12">
-                    <h2 class="font-serif text-4xl lg:text-5xl text-kanzlei-dark mb-8">Yvonne Schmitz</h2>
-                    <h3 class="text-lg font-medium text-kanzlei-greenLight mb-8 uppercase tracking-widest">Inhaberin & Fachanwältin</h3>
-                    
-                    <div class="prose prose-lg text-kanzlei-charcoal font-light leading-relaxed mb-12">
-                        <p>
-                            Rechtsanwältin Yvonne Schmitz gehört zu den etablierten rechtlichen Beratern im Saarland im Bereich des Zivilrechts, mit striktem Fokus auf Erb- und Familienrecht. Seit mehr als 30 Jahren vertritt sie die Interessen ihrer Mandanten – von vermögenden Privatpersonen bis hin zu Unternehmerfamilien.
-                        </p>
-                        <p>
-                            Die doppelte Qualifikation als Fachanwältin für Erbrecht und Familienrecht ermöglicht eine ganzheitliche rechtliche Betrachtung an den Schnittstellen, an denen privates Vermögen und familiäre Strukturen aufeinandertreffen. Als zertifizierte Testamentsvollstreckerin und ausgebildete Mediatorin verfügt sie über ein weites Instrumentarium zur Durchsetzung und Sicherung von Mandanteninteressen – sowohl forensisch vor Gericht als auch in komplexen Verhandlungen.
-                        </p>
-                    </div>
-
-                    <div class="border-t border-kanzlei-stone pt-8">
-                        <h4 class="text-sm uppercase tracking-widest font-semibold text-kanzlei-dark mb-6">Qualifikationen & Zulassungen</h4>
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-4">
-                                <div class="mt-1 w-1.5 h-1.5 bg-kanzlei-greenLight rounded-full"></div>
-                                <div>
-                                    <span class="block font-semibold text-kanzlei-dark">Fachanwältin für Erbrecht</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="mt-1 w-1.5 h-1.5 bg-kanzlei-greenLight rounded-full"></div>
-                                <div>
-                                    <span class="block font-semibold text-kanzlei-dark">Fachanwältin für Familienrecht</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="mt-1 w-1.5 h-1.5 bg-kanzlei-greenLight rounded-full"></div>
-                                <div>
-                                    <span class="block font-semibold text-kanzlei-dark">Zertifizierte Testamentsvollstreckerin</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="mt-1 w-1.5 h-1.5 bg-kanzlei-greenLight rounded-full"></div>
-                                <div>
-                                    <span class="block font-semibold text-kanzlei-dark">Mediatorin (Familien-, Erb- & Seniorenmediation)</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
