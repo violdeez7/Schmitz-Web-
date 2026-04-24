@@ -317,7 +317,7 @@
         </div>
     </section>
 
-    <section id="digital-intake" class="py-32 bg-kanzlei-dark text-white">
+    <section id="digital-intake" class="py-32 bg-kanzlei-green text-white">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
             <div>
@@ -325,7 +325,7 @@
                     Sicheres Mandanten-Portal
                 </div>
                 <h2 class="font-serif text-4xl lg:text-5xl mb-6">Digital Legal Intake System.</h2>
-                <p class="text-lg font-light text-white/70 leading-relaxed mb-8 max-w-xl">
+                <p class="text-lg font-light text-white/80 leading-relaxed mb-8 max-w-xl">
                     Um Ihr Anliegen juristisch präzise zu evaluieren, nutzt unsere Kanzlei ein sicheres digitales Erfassungssystem. Geben Sie die Grunddaten Ihres Falls strukturiert ein, um eine beschleunigte, qualifizierte Ersteinschätzung durch unser Team zu erhalten.
                 </p>
                 <ul class="space-y-4 text-sm font-medium text-white/80 border-t border-white/10 pt-8 max-w-md">
@@ -335,7 +335,7 @@
                     </li>
                     <li class="flex items-center gap-4">
                         <svg class="w-5 h-5 text-kanzlei-greenLight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        Schnellere Fallbearbeitung & Mandatsannahme
+                        Strukturierte Fallaufnahme für Rückruf
                     </li>
                     <li class="flex items-center gap-4">
                         <svg class="w-5 h-5 text-kanzlei-greenLight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
@@ -344,39 +344,70 @@
                 </ul>
             </div>
 
-            <div class="bg-[#1A1A1A] border border-white/10 shadow-2xl rounded-sm overflow-hidden flex flex-col h-[500px]" x-data="intakeSystem()">
-                <div class="bg-[#222222] border-b border-white/10 p-4 flex items-center justify-between text-xs font-mono text-white/50">
-                    <div class="flex items-center gap-3">
-                        <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                        SYS_STATUS: SECURE_CONNECTION
+            <div class="bg-white text-kanzlei-dark shadow-2xl rounded-xl overflow-hidden flex flex-col h-[550px] border border-kanzlei-stone" x-data="intakeSystem()">
+                
+                <div class="bg-kanzlei-bg border-b border-kanzlei-stone p-5 flex items-center gap-4">
+                    <div class="w-10 h-10 bg-kanzlei-green text-kanzlei-greenLight flex items-center justify-center font-serif font-bold text-xl rounded-full">S</div>
+                    <div>
+                        <h4 class="font-bold text-sm text-kanzlei-dark">Kanzlei Assistent</h4>
+                        <div class="flex items-center gap-2 text-xs text-kanzlei-charcoal mt-0.5">
+                            <span class="relative flex h-2 w-2">
+                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-kanzlei-greenLight opacity-75"></span>
+                              <span class="relative inline-flex rounded-full h-2 w-2 bg-kanzlei-greenLight"></span>
+                            </span>
+                            Sichere Verbindung aktiv
+                        </div>
                     </div>
-                    <span>SCHMITZ_LEGAL_INTAKE_v2.1</span>
                 </div>
                 
-                <div class="flex-1 p-6 overflow-y-auto flex flex-col gap-6" id="intake-log">
+                <div class="flex-1 p-6 overflow-y-auto flex flex-col gap-5 bg-white" id="intake-log">
                     <template x-for="(log, index) in logs" :key="index">
-                        <div class="text-sm">
-                            <div x-show="log.type === 'system'" class="text-kanzlei-greenLight font-semibold mb-1">>> SYSTEM:</div>
-                            <div x-show="log.type === 'user'" class="text-white/40 font-semibold mb-1">>> MANDANT:</div>
-                            <div class="text-white/90 font-light whitespace-pre-line" x-html="log.text"></div>
+                        <div class="flex w-full" :class="log.type === 'user' ? 'justify-end' : 'justify-start'">
+                            <div class="max-w-[85%] p-4 rounded-xl text-sm leading-relaxed"
+                                 :class="log.type === 'user' ? 'bg-kanzlei-greenLight text-kanzlei-dark font-medium rounded-br-none' : 'bg-kanzlei-bg border border-kanzlei-stone text-kanzlei-charcoal rounded-bl-none'">
+                                <span x-html="log.text"></span>
+                            </div>
                         </div>
                     </template>
                     
-                    <div x-show="processing" class="text-sm text-kanzlei-greenLight animate-pulse">
-                        >> VERARBEITE DATEN...
+                    <div x-show="processing" class="flex justify-start">
+                        <div class="bg-kanzlei-bg border border-kanzlei-stone p-4 rounded-xl rounded-bl-none flex gap-1.5 items-center h-12">
+                            <div class="w-2 h-2 bg-kanzlei-green/40 rounded-full animate-bounce"></div>
+                            <div class="w-2 h-2 bg-kanzlei-green/40 rounded-full animate-bounce" style="animation-delay: 150ms"></div>
+                            <div class="w-2 h-2 bg-kanzlei-green/40 rounded-full animate-bounce" style="animation-delay: 300ms"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-[#222222] border-t border-white/10 p-4">
-                    <div x-show="step === 'select_area'" class="grid grid-cols-2 gap-2">
-                        <button @click="submitLog('Erbrecht (Testament / Pflichtteil)')" class="border border-white/20 p-3 text-xs uppercase tracking-wider text-left hover:border-kanzlei-greenLight hover:bg-white/5 transition-all">1. Erbrecht</button>
-                        <button @click="submitLog('Familienrecht (Scheidung / Unterhalt)')" class="border border-white/20 p-3 text-xs uppercase tracking-wider text-left hover:border-kanzlei-greenLight hover:bg-white/5 transition-all">2. Familienrecht</button>
-                        <button @click="submitLog('Testamentsvollstreckung')" class="border border-white/20 p-3 text-xs uppercase tracking-wider text-left hover:border-kanzlei-greenLight hover:bg-white/5 transition-all">3. Nachlass</button>
-                        <button @click="submitLog('Mediation / Konfliktlösung')" class="border border-white/20 p-3 text-xs uppercase tracking-wider text-left hover:border-kanzlei-greenLight hover:bg-white/5 transition-all">4. Mediation</button>
+                <div class="bg-kanzlei-bg border-t border-kanzlei-stone p-4">
+                    
+                    <div x-show="step === 'select_area'" class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <button @click="submitArea('Erbrecht')" class="bg-white border border-kanzlei-stone p-3 text-xs uppercase tracking-wider font-semibold rounded-lg hover:border-kanzlei-greenLight hover:bg-kanzlei-greenLight/10 transition-all">Erbrecht</button>
+                        <button @click="submitArea('Familienrecht')" class="bg-white border border-kanzlei-stone p-3 text-xs uppercase tracking-wider font-semibold rounded-lg hover:border-kanzlei-greenLight hover:bg-kanzlei-greenLight/10 transition-all">Familienrecht</button>
+                        <button @click="submitArea('Nachlass / Testamentsvollstreckung')" class="bg-white border border-kanzlei-stone p-3 text-xs uppercase tracking-wider font-semibold rounded-lg hover:border-kanzlei-greenLight hover:bg-kanzlei-greenLight/10 transition-all">Nachlass</button>
+                        <button @click="submitArea('Mediation')" class="bg-white border border-kanzlei-stone p-3 text-xs uppercase tracking-wider font-semibold rounded-lg hover:border-kanzlei-greenLight hover:bg-kanzlei-greenLight/10 transition-all">Mediation</button>
                     </div>
-                    <div x-show="step === 'enter_email'" class="flex gap-2">
-                        <input type="email" x-model="emailInput" placeholder="Ihre geschäftliche oder private E-Mail..." class="flex-1 bg-[#111111] border border-white/20 p-3 text-sm text-white focus:outline-none focus:border-kanzlei-greenLight font-mono">
-                        <button @click="submitEmail()" class="bg-kanzlei-greenLight text-kanzlei-dark font-bold px-6 uppercase text-xs tracking-wider hover:bg-kanzlei-green hover:text-white transition-colors">Senden</button>
+
+                    <div x-show="['enter_name', 'enter_phone', 'enter_email'].includes(step)" class="flex gap-2">
+                        <input :type="step === 'enter_email' ? 'email' : (step === 'enter_phone' ? 'tel' : 'text')" 
+                               x-model="currentInput" 
+                               @keydown.enter="handleEnter()"
+                               :placeholder="getPlaceholder()" 
+                               class="flex-1 bg-white border border-kanzlei-stone p-3 text-sm text-kanzlei-dark focus:outline-none focus:border-kanzlei-greenLight rounded-lg shadow-sm">
+                        
+                        <button @click="handleEnter()" 
+                                class="bg-kanzlei-greenLight text-kanzlei-dark font-bold px-6 uppercase text-xs tracking-wider rounded-lg hover:bg-kanzlei-green hover:text-white transition-colors shadow-sm">
+                            Senden
+                        </button>
+                    </div>
+
+                    <div x-show="step === 'enter_message'" class="flex flex-col gap-3">
+                        <textarea x-model="currentInput" rows="3" placeholder="Kurze Beschreibung (optional)..."
+                                  class="w-full bg-white border border-kanzlei-stone p-3 text-sm text-kanzlei-dark focus:outline-none focus:border-kanzlei-greenLight rounded-lg shadow-sm resize-none"></textarea>
+                        <button @click="submitMessage()" 
+                                class="bg-kanzlei-greenLight text-kanzlei-dark font-bold px-6 py-3 uppercase text-xs tracking-wider rounded-lg hover:bg-kanzlei-green hover:text-white transition-colors shadow-sm self-end">
+                            Nachricht Senden
+                        </button>
                     </div>
                 </div>
             </div>
@@ -424,7 +455,7 @@
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-widest text-kanzlei-dark mb-6">Legal Alerts</h4>
                     <p class="text-sm text-kanzlei-charcoal font-light mb-4">Abonnieren Sie unsere Kanzlei-Updates zu aktuellen Urteilen im Erb- und Familienrecht.</p>
-                    <div class="flex border border-kanzlei-stone">
+                    <div class="flex border border-kanzlei-stone rounded-md overflow-hidden">
                         <input type="email" placeholder="E-Mail Adresse" class="w-full p-3 text-sm bg-white focus:outline-none focus:border-kanzlei-greenLight">
                         <button class="bg-kanzlei-dark text-white px-4 hover:bg-kanzlei-green transition-colors">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -449,53 +480,92 @@
             return {
                 step: 'select_area',
                 processing: false,
-                emailInput: '',
+                currentInput: '',
+                formData: { area: '', name: '', phone: '', message: '', email: '' },
                 logs: [
-                    { type: 'system', text: 'Initialisiere sicheres Erfassungsprotokoll... OK\nBitte wählen Sie das betroffene Rechtsgebiet aus:' }
+                    { type: 'system', text: 'Herzlich willkommen im digitalen Portal der Kanzlei Schmitz.<br><br>Um uns bestmöglich auf ein Erstgespräch vorzubereiten, bitten wir Sie um ein paar Eckdaten. <strong>Welches Rechtsgebiet betrifft Ihr Anliegen?</strong>' }
                 ],
                 
-                async submitLog(choice) {
-                    this.logs.push({ type: 'user', text: choice });
-                    this.step = 'processing';
+                async addSystemMessage(text, delay = 1200) {
                     this.processing = true;
                     this.scrollToBottom();
-                    
-                    // Simulate API delay
-                    await new Promise(r => setTimeout(r, 1000));
-                    
+                    await new Promise(r => setTimeout(r, delay));
                     this.processing = false;
-                    this.logs.push({ 
-                        type: 'system', 
-                        text: `Rechtsgebiet registriert: ${choice}.\nFür die Zuordnung und Übersendung des sicheren Mandanten-Fragebogens benötigen wir eine Kontakt-E-Mail-Adresse.` 
-                    });
-                    this.step = 'enter_email';
+                    this.logs.push({ type: 'system', text: text });
                     this.scrollToBottom();
                 },
-                
+
+                async submitArea(choice) {
+                    this.formData.area = choice;
+                    this.logs.push({ type: 'user', text: choice });
+                    this.step = 'waiting';
+                    
+                    await this.addSystemMessage(`Vielen Dank. Wie lautet Ihr <strong>Vor- und Nachname</strong>?`);
+                    this.step = 'enter_name';
+                },
+
+                async submitName() {
+                    if(!this.currentInput.trim()) return;
+                    this.formData.name = this.currentInput;
+                    this.logs.push({ type: 'user', text: this.currentInput });
+                    this.currentInput = '';
+                    this.step = 'waiting';
+                    
+                    let firstName = this.formData.name.split(' ')[0];
+                    await this.addSystemMessage(`Guten Tag ${firstName}. Unter welcher <strong>Telefonnummer</strong> können wir Sie für Rückfragen oder eine Terminvereinbarung am besten erreichen?`);
+                    this.step = 'enter_phone';
+                },
+
+                async submitPhone() {
+                    if(!this.currentInput.trim()) return;
+                    this.formData.phone = this.currentInput;
+                    this.logs.push({ type: 'user', text: this.currentInput });
+                    this.currentInput = '';
+                    this.step = 'waiting';
+                    
+                    await this.addSystemMessage(`Danke. Bitte schildern Sie uns in 2-3 Sätzen kurz den <strong>Kern Ihres Anliegens</strong>.`);
+                    this.step = 'enter_message';
+                },
+
+                async submitMessage() {
+                    if(!this.currentInput.trim()) this.currentInput = "Keine Angabe";
+                    this.formData.message = this.currentInput;
+                    this.logs.push({ type: 'user', text: this.currentInput });
+                    this.currentInput = '';
+                    this.step = 'waiting';
+                    
+                    await this.addSystemMessage(`Fast geschafft! An welche <strong>E-Mail-Adresse</strong> dürfen wir Ihnen unsere Bestätigung senden?`);
+                    this.step = 'enter_email';
+                },
+
                 async submitEmail() {
-                    if(!this.emailInput.includes('@')) return;
+                    if(!this.currentInput.includes('@')) return;
+                    this.formData.email = this.currentInput;
+                    this.logs.push({ type: 'user', text: this.currentInput });
+                    this.currentInput = '';
+                    this.step = 'waiting';
                     
-                    this.logs.push({ type: 'user', text: this.emailInput });
-                    this.step = 'processing';
-                    this.processing = true;
-                    this.scrollToBottom();
-                    
-                    // Simulate API delay
-                    await new Promise(r => setTimeout(r, 1500));
-                    
-                    this.processing = false;
-                    this.logs.push({ 
-                        type: 'system', 
-                        text: 'DATEN ERFOLGREICH VERSCHLÜSSELT UND ÜBERMITTELT.\n\nUnser Sekretariat wird sich in Kürze unter der angegebenen Adresse bei Ihnen melden. Sie können dieses Fenster nun schließen.' 
-                    });
+                    await this.addSystemMessage(`<strong>DATEN ERFOLGREICH ÜBERMITTELT.</strong><br><br>Vielen Dank für Ihr Vertrauen. Unser Sekretariat wird sich zeitnah mit Ihnen in Verbindung setzen. Sie können dieses Fenster nun schließen.`, 2000);
                     this.step = 'finished';
-                    this.scrollToBottom();
+                },
+
+                handleEnter() {
+                    if(this.step === 'enter_name') this.submitName();
+                    else if(this.step === 'enter_phone') this.submitPhone();
+                    else if(this.step === 'enter_email') this.submitEmail();
+                },
+
+                getPlaceholder() {
+                    if(this.step === 'enter_name') return 'Max Mustermann...';
+                    if(this.step === 'enter_phone') return '+49 170...';
+                    if(this.step === 'enter_email') return 'ihre.email@adresse.de...';
+                    return '';
                 },
                 
                 scrollToBottom() {
                     setTimeout(() => {
                         const logContainer = document.getElementById('intake-log');
-                        logContainer.scrollTop = logContainer.scrollHeight;
+                        if(logContainer) logContainer.scrollTop = logContainer.scrollHeight;
                     }, 50);
                 }
             }
