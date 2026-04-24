@@ -70,13 +70,17 @@
     <header class="bg-kanzlei-bg border-b border-kanzlei-stone sticky top-0 z-50 transition-all duration-300" x-data="{ scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 20)">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="flex justify-between items-center" :class="scrolled ? 'h-20' : 'h-28'">
-                <a href="#" class="flex items-center gap-5 group">
-                    <div class="w-12 h-12 border-2 border-kanzlei-greenLight flex items-center justify-center text-kanzlei-greenLight font-serif text-2xl font-bold bg-kanzlei-green">
-                        S
+                <a href="/" class="flex items-center gap-4 group hover:opacity-90 transition-opacity">
+                    <div class="w-12 h-12 bg-kanzlei-green flex items-center justify-center">
+                        <span class="text-kanzlei-greenLight font-sans font-bold text-3xl">S</span>
                     </div>
-                    <div class="flex flex-col">
-                        <span class="font-serif text-2xl tracking-wide text-kanzlei-dark leading-none mb-1">Yvonne Schmitz</span>
-                        <span class="text-[10px] uppercase tracking-[0.25em] text-kanzlei-charcoal font-semibold">Avocats Associés</span>
+                    
+                    <div class="flex flex-col mt-0.5">
+                        <span class="font-sans font-extrabold text-[22px] tracking-[0.15em] text-kanzlei-dark leading-none">SCHMITZ</span>
+                        
+                        <div class="h-[2px] w-full bg-kanzlei-greenLight my-1.5"></div>
+                        
+                        <span class="text-[9px] uppercase tracking-[0.35em] text-kanzlei-charcoal font-bold leading-none">Advocate</span>
                     </div>
                 </a>
                 
