@@ -1,15 +1,61 @@
-<main class="max-w-[1400px] mx-auto px-6 py-20">
-    <h1 class="font-serif text-5xl mb-10">Contact & Mentions Légales</h1>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <div>
-            <p class="text-xs uppercase tracking-widest font-bold mb-2 text-kanzlei-green">Téléphone</p>
-            <a href="tel:+4906819543570" class="text-2xl">+49 (0) 681 9543570</a>
-            <p class="text-xs uppercase tracking-widest font-bold mt-8 mb-2 text-kanzlei-green">E-Mail</p>
-            <a href="mailto:info@schmitz-recht.de" class="text-2xl">info@schmitz-recht.de</a>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Mentions Légales | Yvonne Schmitz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { kanzlei: { green: '#585A59', greenLight: '#C5D800', warmGrey: '#EBE8E3', stone: '#D9D6D0', dark: '#111111', bg: '#FBFBFA' } },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-kanzlei-bg font-sans antialiased text-kanzlei-dark">
+    <nav class="p-6 border-b border-kanzlei-stone bg-white">
+        <div class="max-w-[1400px] mx-auto flex justify-between items-center">
+            <a href="fr.html" class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-kanzlei-green flex items-center justify-center text-kanzlei-greenLight font-bold text-xl">S</div>
+                <span class="font-bold tracking-widest text-lg uppercase">Schmitz</span>
+            </a>
+            <a href="fr.html" class="text-xs uppercase tracking-widest font-bold border-b border-kanzlei-dark pb-1">Retour à l'accueil</a>
         </div>
-        <div class="border-t lg:border-t-0 lg:border-l border-kanzlei-stone lg:pl-16 pt-10 lg:pt-0">
-            <h2 class="text-xs uppercase tracking-widest font-bold mb-6">Informations Légales</h2>
-            <p class="text-sm font-light">Responsable: Yvonne Schmitz, Avocate<br>Barreau compétent: Barreau de la Sarre</p>
+    </nav>
+
+    <main class="max-w-[1400px] mx-auto px-6 py-20">
+        <div class="flex flex-col lg:flex-row gap-16 items-start">
+            <div class="w-full lg:w-1/2">
+                <h1 class="font-serif text-5xl mb-12">Contact</h1>
+                <div class="space-y-8">
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] text-kanzlei-green font-bold mb-2">Téléphone</p>
+                        <a href="tel:+4906819543570" class="text-2xl hover:text-kanzlei-greenLight">+49 (0) 681 9543570</a>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] text-kanzlei-green font-bold mb-2">E-Mail</p>
+                        <a href="mailto:info@schmitz-recht.de" class="text-2xl hover:text-kanzlei-greenLight">info@schmitz-recht.de</a>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] text-kanzlei-green font-bold mb-2">Adresse</p>
+                        <p class="text-2xl">Gutenbergstrasse 13<br>66117 Sarrebruck, Allemagne</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 border-t lg:border-t-0 lg:border-l border-kanzlei-stone lg:pl-16 pt-10 lg:pt-0">
+                <h2 class="text-xs uppercase tracking-widest font-bold mb-6">Mentions Légales</h2>
+                <div class="text-xs text-kanzlei-charcoal leading-loose font-light space-y-4">
+                    <p><strong>Avocate responsable:</strong> Yvonne Schmitz</p>
+                    <p><strong>Barreau compétent:</strong> Membre du Barreau de la Sarre (Rechtsanwaltskammer des Saarlandes)</p>
+                    <p><strong>Titre professionnel:</strong> Rechtsanwältin (Avocate), agréée en République fédérale d'Allemagne.</p>
+                </div>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
+</body>
+</html>
