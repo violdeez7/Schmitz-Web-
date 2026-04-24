@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt & Impressum | Yvonne Schmitz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kanzlei: { green: '#585A59', greenLight: '#C5D800', warmGrey: '#EBE8E3', stone: '#D9D6D0', dark: '#111111', bg: '#FBFBFA' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-kanzlei-bg font-sans antialiased text-kanzlei-dark">
+
+    <nav class="p-6 border-b border-kanzlei-stone bg-white">
+        <div class="max-w-[1400px] mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-kanzlei-green flex items-center justify-center text-kanzlei-greenLight font-bold text-xl">S</div>
+                <span class="font-bold tracking-widest text-lg">SCHMITZ</span>
+            </a>
+            <a href="index.html" class="text-xs uppercase tracking-widest font-bold border-b border-kanzlei-dark pb-1">Zurück zur Startseite</a>
+        </div>
+    </nav>
+
+    <main class="max-w-[1400px] mx-auto px-6 py-20">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+            <div class="w-full lg:w-1/2">
+                <div class="aspect-[4/5] bg-kanzlei-stone relative overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1200" alt="Yvonne Schmitz" class="absolute inset-0 w-full h-full object-cover grayscale-[20%]">
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2">
+                <h1 class="font-serif text-5xl mb-10">Kontakt</h1>
+                
+                <div class="space-y-8 mb-16">
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] text-kanzlei-green font-bold mb-2">Telefon</p>
+                        <a href="tel:+4906819543570" class="text-2xl hover:text-kanzlei-greenLight transition-colors">+49 (0) 681 9543570</a>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] text-kanzlei-green font-bold mb-2">E-Mail</p>
+                        <a href="mailto:info@schmitz-recht.de" class="text-2xl hover:text-kanzlei-greenLight transition-colors">info@schmitz-recht.de</a>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[0.3em] text-kanzlei-green font-bold mb-2">Büroadresse</p>
+                        <p class="text-2xl leading-relaxed">Musterstraße 1<br>66111 Saarbrücken</p>
+                    </div>
+                </div>
+
+                <div class="border-t border-kanzlei-stone pt-10">
+                    <h2 class="text-xs uppercase tracking-widest font-bold mb-6">Impressum & Pflichtangaben</h2>
+                    <div class="text-xs text-kanzlei-charcoal leading-loose font-light">
+                        <p><strong>Verantwortlich:</strong> Yvonne Schmitz, Rechtsanwältin</p>
+                        <p><strong>Zuständige Kammer:</strong> Rechtsanwaltskammer des Saarlandes</p>
+                        <p><strong>Berufsbezeichnung:</strong> Rechtsanwältin (verliehen in der Bundesrepublik Deutschland)</p>
+                        <p><strong>Berufshaftpflichtversicherung:</strong> [Name der Versicherung], [Anschrift]</p>
+                        <p>Plattform der EU zur außergerichtlichen Online-Streitbeilegung: <a href="https://ec.europa.eu/consumers/odr/" class="underline">https://ec.europa.eu/consumers/odr/</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
