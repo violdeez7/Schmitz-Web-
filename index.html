@@ -13,19 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
-      <script>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         kanzlei: {
-                            /* We keep the variable name 'green' so you don't have to rewrite the HTML, 
-                               but we change its value to your Logo Grey! */
-                            green: '#585A59', 
-                            
-                            /* Your Signature Lime Green */
-                            greenLight: '#C5D800', 
-                            
+                            green: '#585A59', /* Logo Dunkelgrau */
+                            greenLight: '#C5D800', /* Signatur Limettengrün */
                             warmGrey: '#EBE8E3', 
                             stone: '#D9D6D0', 
                             dark: '#111111', 
@@ -41,7 +36,8 @@
             }
         }
     </script>
-
+    
+    <style>
         body { background-color: #FBFBFA; color: #111111; }
         /* Corporate hover effect for links */
         .corp-link { position: relative; text-decoration: none; }
@@ -56,9 +52,10 @@
         .grid-borders > div { border-right: 1px solid #D9D6D0; border-bottom: 1px solid #D9D6D0; }
     </style>
 </head>
+
 <body class="antialiased font-sans">
 
-    <div class="bg-kanzlei-dark text-white/70 text-xs py-2 px-6 lg:px-12 flex justify-between items-center hidden md:flex font-medium tracking-wide">
+    <div class="absolute right-0 top-0 w-1/2 h-full bg-kanzlei-greenLight opacity-50 transform skew-x-12 translate-x-32"></div>
         <div class="flex gap-6">
             <a href="#" class="hover:text-white transition-colors">Mandanten-Portal</a>
             <a href="#" class="hover:text-white transition-colors">Karriere</a>
