@@ -13,19 +13,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
-    <script>
+      <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         kanzlei: {
-                            green: '#1a3b2f', /* Deep Institutional Green */
-                              greenlight: '##C5D800', /* Signature Brand Green */
-                            warmGrey: '#EBE8E3', /* Brand Muted Grey */
-                            stone: '#D9D6D0', /* Darker Grey for borders */
-                            dark: '#111111', /* Near Black for text */
+                            /* We keep the variable name 'green' so you don't have to rewrite the HTML, 
+                               but we change its value to your Logo Grey! */
+                            green: '#585A59', 
+                            
+                            /* Your Signature Lime Green */
+                            greenLight: '#C5D800', 
+                            
+                            warmGrey: '#EBE8E3', 
+                            stone: '#D9D6D0', 
+                            dark: '#111111', 
                             charcoal: '#333333',
-                            bg: '#FBFBFA' /* Off-white premium background */
+                            bg: '#FBFBFA' 
                         }
                     },
                     fontFamily: {
@@ -36,7 +41,7 @@
             }
         }
     </script>
-    <style>
+
         body { background-color: #FBFBFA; color: #111111; }
         /* Corporate hover effect for links */
         .corp-link { position: relative; text-decoration: none; }
