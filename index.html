@@ -70,23 +70,16 @@
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="flex justify-between items-center" :class="scrolled ? 'h-20' : 'h-28'">
                
-               <a href="/" class="flex items-center gap-4 group hover:opacity-90 transition-opacity">
-                  <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-kanzlei-green flex items-center justify-center">
-                      <span class="text-kanzlei-greenLight font-sans font-bold text-3xl">S</span>
-                    </div>
-                    
-                    <div class="flex flex-col mt-0.5">
-                      <span class="font-sans font-extrabold text-[22px] tracking-[0.15em] text-kanzlei-dark leading-none">SCHMITZ</span>
-                      
-                      <span class="text-[9px] uppercase tracking-[0.35em] text-kanzlei-charcoal font-bold leading-none">RECHTSANWÄLTIN</span>
-                    </div>
-                  </div>
-                
-                  <div class="h-16 w-[1px] bg-kanzlei-greenLight"></div>
-                
-                  <img src="Pfad/zu/deinem/bild.jpg" alt="Yvonne Schmitz Portrait" class="h-16 object-contain">
-                </a>
+                               <a href="index.html" class="flex items-center gap-4 group hover:opacity-90 transition-opacity">
+                                <div class="w-12 h-12 bg-kanzlei-green flex items-center justify-center">
+                                    <span class="text-kanzlei-greenLight font-sans font-bold text-3xl">S</span>
+                                </div>
+                                <div class="flex flex-col mt-0.5">
+                                    <span class="font-sans font-extrabold text-[22px] tracking-[0.15em] text-kanzlei-dark leading-none">SCHMITZ</span>
+                                    <div class="h-[2px] w-full bg-kanzlei-greenLight my-1.5"></div>
+                                    <span class="text-[9px] uppercase tracking-[0.35em] text-kanzlei-charcoal font-bold leading-none">Rechtsanwältin</span>
+                                </div>
+                            </a>
 
                 <nav class="hidden lg:flex items-center gap-10 text-sm font-semibold tracking-wide uppercase text-kanzlei-charcoal">
                     <a href="#expertise" class="hover:text-kanzlei-greenLight transition-colors">Kompetenzen</a>
@@ -103,25 +96,19 @@
         </div>
     </header>
 
-    <section class="relative bg-[#3A3C3B] text-white overflow-hidden">
-        <div class="absolute right-0 top-0 w-1/2 h-full bg-kanzlei-green transform skew-x-12 translate-x-32 z-0"></div>
-        <div class="absolute right-1/2 top-0 w-[2px] h-full bg-kanzlei-greenLight transform skew-x-12 translate-x-32 z-0"></div>
-        
-        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10 py-32 lg:py-48 flex flex-col justify-center">
-            <div class="max-w-3xl">
+        <section class="relative bg-[#3A3C3B] text-white overflow-hidden border-b border-kanzlei-stone">
+        <div class="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-stretch min-h-[650px]">
+            
+            <div class="w-full lg:w-1/2 px-6 lg:px-12 py-20 lg:py-32 flex flex-col justify-center">
                 <div class="flex items-center gap-4 mb-8">
                     <div class="h-px w-16 bg-kanzlei-warmGrey"></div>
                     <span class="text-xs uppercase tracking-[0.2em] text-kanzlei-warmGrey font-medium">Kompetenz seit über 30 Jahren</span>
                 </div>
                 <h1 class="font-serif text-5xl lg:text-7xl leading-[1.05] mb-8">
-                    Ihre Kanzlei <br> für Erbrecht
-                <p>Familienrecht & </p> 
+                    Ihre Kanzlei <br>für Erbrecht & <br>Familienrecht.
                 </h1>
-
-
-                
-                <div class="flex flex-col sm:flex-row gap-6">
-                    <a href="#digital-intake" class="bg-white text-kanzlei-dark font-bold text-sm tracking-widest uppercase px-8 py-4 hover:bg-kanzlei-warmGrey transition-colors text-center shadow-lg">
+                <div class="flex flex-col sm:flex-row gap-6 mt-4">
+                    <a href="#digital-intake" class="bg-white text-kanzlei-dark font-bold text-sm tracking-widest uppercase px-8 py-4 hover:bg-kanzlei-greenLight transition-colors text-center shadow-lg">
                         Mandatsanfrage senden
                     </a>
                     <a href="#expertise" class="border border-white/30 text-white font-semibold text-sm tracking-widest uppercase px-8 py-4 hover:bg-white/10 transition-colors text-center">
@@ -129,6 +116,15 @@
                     </a>
                 </div>
             </div>
+
+            <div class="hidden lg:block w-[2px] bg-kanzlei-greenLight my-24 shadow-[0_0_15px_rgba(197,216,0,0.3)]"></div>
+
+            <div class="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full">
+                <img src="dein-bild.jpg" alt="Kanzlei Yvonne Schmitz" class="absolute inset-0 w-full h-full object-cover grayscale-[10%]">
+                
+                <div class="absolute inset-0 bg-gradient-to-r from-[#3A3C3B]/30 to-transparent"></div>
+            </div>
+            
         </div>
     </section>
     
