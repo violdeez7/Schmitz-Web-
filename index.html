@@ -70,15 +70,22 @@
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="flex justify-between items-center" :class="scrolled ? 'h-20' : 'h-28'">
                
-                <a href="/" class="flex items-center gap-4 group hover:opacity-90 transition-opacity">
+               <a href="/" class="flex items-center gap-4 group hover:opacity-90 transition-opacity">
+                  <div class="flex items-center gap-4">
                     <div class="w-12 h-12 bg-kanzlei-green flex items-center justify-center">
-                        <span class="text-kanzlei-greenLight font-sans font-bold text-3xl">S</span>
+                      <span class="text-kanzlei-greenLight font-sans font-bold text-3xl">S</span>
                     </div>
+                    
                     <div class="flex flex-col mt-0.5">
-                        <span class="font-sans font-extrabold text-[22px] tracking-[0.15em] text-kanzlei-dark leading-none">SCHMITZ</span>
-                        <div class="h-[2px] w-full bg-kanzlei-greenLight my-1.5"></div>
-                        <span class="text-[9px] uppercase tracking-[0.35em] text-kanzlei-charcoal font-bold leading-none">Rechtsanwältin</span>
+                      <span class="font-sans font-extrabold text-[22px] tracking-[0.15em] text-kanzlei-dark leading-none">SCHMITZ</span>
+                      
+                      <span class="text-[9px] uppercase tracking-[0.35em] text-kanzlei-charcoal font-bold leading-none">RECHTSANWÄLTIN</span>
                     </div>
+                  </div>
+                
+                  <div class="h-16 w-[1px] bg-kanzlei-greenLight"></div>
+                
+                  <img src="Pfad/zu/deinem/bild.jpg" alt="Yvonne Schmitz Portrait" class="h-16 object-contain">
                 </a>
 
                 <nav class="hidden lg:flex items-center gap-10 text-sm font-semibold tracking-wide uppercase text-kanzlei-charcoal">
