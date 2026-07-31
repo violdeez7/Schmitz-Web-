@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanzlei-Journal & Veranstaltungen | Yvonne Schmitz</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kanzlei: { green: '#585A59', greenLight: '#C5D800', warmGrey: '#EBE8E3', stone: '#D9D6D0', dark: '#111111', charcoal: '#333333', bg: '#FBFBFA' }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-kanzlei-bg font-sans antialiased text-kanzlei-dark">
+
+    <!-- Header Navigation (Kompakt für Unterseiten) -->
+    <nav class="p-6 border-b border-kanzlei-stone bg-white sticky top-0 z-50">
+        <div class="max-w-[1400px] mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div class="w-10 h-10 bg-kanzlei-green flex items-center justify-center text-kanzlei-greenLight font-bold text-xl">S</div>
+                <div class="flex flex-col mt-0.5">
+                    <span class="font-extrabold text-lg tracking-[0.15em] text-kanzlei-dark leading-none">SCHMITZ</span>
+                    <span class="text-[7px] uppercase tracking-[0.35em] text-kanzlei-charcoal font-bold mt-1">Rechtsanwältin</span>
+                </div>
+            </a>
+            <a href="index.html" class="text-xs uppercase tracking-widest font-bold border-b border-kanzlei-dark pb-1 hover:text-kanzlei-greenLight hover:border-kanzlei-greenLight transition-colors">Zurück zur Startseite</a>
+        </div>
+    </nav>
+
+    <main class="max-w-[1000px] mx-auto px-6 py-20 lg:py-32">
+        
+        <!-- Seiten-Titel -->
+        <div class="mb-20 border-b border-kanzlei-stone pb-10">
+            <h1 class="font-serif text-5xl lg:text-6xl text-kanzlei-dark mb-6">Vorträge &<br>Veranstaltungen</h1>
+            <p class="text-lg text-kanzlei-charcoal font-light max-w-2xl leading-relaxed">
+                Willkommen im Kanzlei-Journal. Hier informieren wir Sie über anstehende Seminare, Vorträge und Informationsveranstaltungen im Bereich Erb- und Familienrecht sowie Vorsorge.
+            </p>
+        </div>
+
+        <!-- ZUKÜNFTIGE VERANSTALTUNGEN -->
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="w-3 h-3 bg-kanzlei-greenLight rounded-full animate-pulse"></div>
+                <h2 class="text-2xl font-bold uppercase tracking-widest text-kanzlei-dark">Aktuelle Termine</h2>
+            </div>
+
+            <div class="space-y-8">
+                
+                <!-- Vorlage für Zukünftiges Event 1 -->
+                <article class="bg-white border border-kanzlei-stone p-8 lg:p-10 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-kanzlei-greenLight"></div>
+                    
+                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6">
+                        <div class="flex-1">
+                            <p class="text-xs font-bold uppercase tracking-widest text-kanzlei-green mb-3">Donnerstag, 15. Oktober 2026 | 18:00 Uhr</p>
+                            <h3 class="text-2xl font-serif font-semibold text-kanzlei-dark mb-4">Erbrecht für Unternehmer: Nachfolge rechtssicher gestalten</h3>
+                            <p class="text-sm font-light text-kanzlei-charcoal mb-4">
+                                Ein praxisnaher Vortrag zur Absicherung von Familienunternehmen. Erfahren Sie, wie Sie Gesellschaftsverträge und Testamente so aufeinander abstimmen, dass das Unternehmen im Erbfall handlungsfähig bleibt.
+                            </p>
+                            <p class="text-xs font-semibold text-kanzlei-dark flex items-center gap-2">
+                                <svg class="w-4 h-4 text-kanzlei-greenLight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                Ort: IHK Saarland, Franz-Josef-Röder-Straße 9, 66119 Saarbrücken
+                            </p>
+                        </div>
+                        
+                        <!-- PDF Download Button -->
+                        <div class="mt-4 lg:mt-0 flex-shrink-0">
+                            <!-- Hier den Link zur PDF eintragen (z.B. href="einladung-oktober.pdf") -->
+                            <a href="einladung.pdf" target="_blank" class="inline-flex items-center gap-3 bg-kanzlei-dark text-white px-6 py-4 text-xs font-bold uppercase tracking-widest hover:bg-kanzlei-greenLight hover:text-kanzlei-dark transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                Einladung & Agenda (PDF)
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- VERGANGENE VERANSTALTUNGEN -->
+        <section>
+            <div class="flex items-center gap-4 mb-12">
+                <div class="w-3 h-3 bg-kanzlei-stone rounded-full"></div>
+                <h2 class="text-2xl font-bold uppercase tracking-widest text-kanzlei-charcoal">Vergangene Veranstaltungen</h2>
+            </div>
+
+            <!-- Grid für vergangene Events -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Vorlage für Vergangenes Event 1 -->
+                <article class="bg-white border border-kanzlei-stone p-8 hover:bg-kanzlei-warmGrey/20 transition-colors">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-kanzlei-stone mb-3">12. Mai 2026</p>
+                    <h3 class="text-xl font-serif font-semibold text-kanzlei-dark mb-3">Vorsorgevollmacht & Patientenverfügung</h3>
+                    <p class="text-sm font-light text-kanzlei-charcoal mb-4">
+                        Informationsabend über die Notwendigkeit und korrekte Erstellung von Vorsorgedokumenten nach aktueller BGH-Rechtsprechung.
+                    </p>
+                    <p class="text-[10px] font-semibold text-kanzlei-charcoal uppercase tracking-widest">
+                        Ort: Kanzlei Schmitz, Saarbrücken
+                    </p>
+                </article>
+
+                <!-- Vorlage für Vergangenes Event 2 -->
+                <article class="bg-white border border-kanzlei-stone p-8 hover:bg-kanzlei-warmGrey/20 transition-colors">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-kanzlei-stone mb-3">03. März 2026</p>
+                    <h3 class="text-xl font-serif font-semibold text-kanzlei-dark mb-3">Die Ehekrise als rechtliche Herausforderung</h3>
+                    <p class="text-sm font-light text-kanzlei-charcoal mb-4">
+                        Ein Vortrag über strategisches Vorgehen bei Trennung und Scheidung, Zugewinnausgleich und Unterhaltsfragen.
+                    </p>
+                    <p class="text-[10px] font-semibold text-kanzlei-charcoal uppercase tracking-widest">
+                        Ort: Volkshochschule Saarbrücken
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Simpler Footer für die Unterseite -->
+    <footer class="bg-kanzlei-dark text-white py-12 border-t-4 border-kanzlei-greenLight">
+        <div class="max-w-[1400px] mx-auto px-6 text-center text-xs uppercase tracking-widest font-light text-kanzlei-stone">
+            <p>&copy; 2026 Schmitz Rechtsanwälte. Alle Rechte vorbehalten. | <a href="kontakt.html" class="hover:text-kanzlei-greenLight">Impressum & Kontakt</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
