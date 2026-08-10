@@ -678,16 +678,46 @@
                     this.step = 'enter_email';
                 },
 
-                async submitEmail() {
+               async submitEmail() {
                     if(!this.currentInput.includes('@')) return;
                     this.formData.email = this.currentInput;
                     this.logs.push({ type: 'user', text: this.currentInput });
                     this.currentInput = '';
                     this.step = 'waiting';
                     
-                    await this.addSystemMessage(`<strong>DATEN ERFOLGREICH ÜBERMITTELT.</strong><br><br>Vielen Dank für Ihr Vertrauen. Unser Sekretariat wird sich zeitnah mit Ihnen in Verbindung setzen. Sie können dieses Fenster nun schließen.`, 2000);
+                    // Daten an deine E-Mail senden via Web3Forms
+                    try {
+                        let response = await fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            headers: { 
+                                'Content-Type': 'application/json', 
+                                'Accept': 'application/json' 
+                            },
+                            body: JSON.stringify({
+                                access_key: 'adb92de2-7c30-4b02-8054-6123aa47f260', // Hier deinen Key einfügen!
+                                subject: 'Neue Mandatsanfrage über Kanzlei-Website',
+                                from_name: 'Kanzlei Assistent',
+                                'Rechtsgebiet': this.formData.area,
+                                'Name des Mandanten': this.formData.name,
+                                'Telefonnummer': this.formData.phone,
+                                'Anliegen': this.formData.message,
+                                'E-Mail': this.formData.email
+                            })
+                        });
+                        
+                        let result = await response.json();
+                        if (result.success) {
+                            await this.addSystemMessage(`<strong>DATEN ERFOLGREICH ÜBERMITTELT.</strong><br><br>Vielen Dank für Ihr Vertrauen. Unser Sekretariat wird sich zeitnah mit Ihnen in Verbindung setzen. Sie können dieses Fenster nun schließen.`, 2000);
+                        } else {
+                            await this.addSystemMessage(`Es gab ein technisches Problem beim Senden. Bitte rufen Sie uns direkt an.`);
+                        }
+                    } catch (error) {
+                        await this.addSystemMessage(`Verbindungsfehler. Bitte kontaktieren Sie uns direkt per Telefon oder E-Mail.`);
+                    }
+                    
                     this.step = 'finished';
                 },
+
 
                 handleEnter() {
                     if(this.step === 'enter_name') this.submitName();
