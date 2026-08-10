@@ -160,8 +160,10 @@
                 </div>
             </div>
 
+            <!-- Das Grid ist jetzt auf 3 Spalten ausgelegt -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-kanzlei-stone border border-kanzlei-stone">
                 
+                <!-- 1. Erbrecht -->
                 <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col relative">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
                     <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Erbrecht</h3>
@@ -192,6 +194,7 @@
                     </template>
                 </div>
                 
+                <!-- 2. Familienrecht -->
                 <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col relative">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
                     <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Familienrecht</h3>
@@ -222,6 +225,7 @@
                     </template>
                 </div>
 
+                <!-- 3. Nachlassverwaltung -->
                 <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col relative">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
                     <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Nachlassverwaltung</h3>
@@ -252,6 +256,7 @@
                     </template>
                 </div>
 
+                <!-- 4. Mediation -->
                 <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col relative">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
                     <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Mediation</h3>
@@ -286,11 +291,48 @@
                         </div>
                     </template>
                 </div>
+
+                <!-- 5. NEU: Cooperative Praxis -->
+                <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col relative">
+                    <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
+                    <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Cooperative Praxis</h3>
+                    <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">
+                        Konsensuale Streitbeilegung im Familien- und Erbrecht ohne Gericht. Gemeinsam faire Lösungen erarbeiten.
+                    </p>
+                    <button @click="open = true" class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
+                        Details <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </button>
+
+                    <template x-teleport="body">
+                        <div x-show="open" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-kanzlei-dark/90 backdrop-blur-sm" x-transition>
+                            <div @click.away="open = false" class="bg-white max-w-2xl w-full p-8 lg:p-12 shadow-2xl relative border-l-4 border-kanzlei-greenLight">
+                                <button @click="open = false" class="absolute top-6 right-6 text-kanzlei-charcoal hover:text-kanzlei-greenLight"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                                <h3 class="font-serif text-3xl mb-6 text-kanzlei-dark">Cooperative Praxis</h3>
+                                <div class="text-kanzlei-charcoal leading-relaxed space-y-4">
+                                    <p>Die Cooperative Praxis ist ein strukturiertes, außergerichtliches Verfahren zur konstruktiven Konfliktlösung, insbesondere bei Trennung, Scheidung und Erbstreitigkeiten.</p>
+                                    <ul class="list-disc pl-5 space-y-2 font-light">
+                                        <li>Interdisziplinärer Ansatz (anwaltliche Vertretung auf Basis von Kooperation statt Konfrontation)</li>
+                                        <li>Fokus auf gemeinsame, zukunftsorientierte Interessen</li>
+                                        <li>Schutz der familiären und geschäftlichen Beziehungen</li>
+                                        <li>Vermeidung von langwierigen und belastenden Gerichtsprozessen</li>
+                                    </ul>
+                                    <div class="pt-6">
+                                      <a href="https://schmitz-mediationen.vercel.app" target="_blank" @click="open = false" class="inline-flex items-center gap-2 bg-kanzlei-green text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-kanzlei-greenLight hover:text-kanzlei-dark transition-all">
+                                            Zur Website (Mediation & Praxis)
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
                 
-                <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col lg:col-span-2 relative">
+                <!-- 6. Vorsorge & Vermögensnachfolge (wieder in normaler Größe) -->
+                <div x-data="{ open: false }" class="bg-white p-12 hover:bg-kanzlei-warmGrey/30 transition-colors group cursor-pointer h-full flex flex-col relative">
                     <div class="h-1 w-12 bg-kanzlei-greenLight mb-8 transform origin-left group-hover:scale-x-150 transition-transform"></div>
                     <h3 class="font-serif text-2xl mb-4 text-kanzlei-dark">Vorsorge & Vermögensnachfolge</h3>
-                    <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow max-w-2xl">
+                    <p class="text-sm text-kanzlei-charcoal font-light leading-relaxed mb-8 flex-grow">
                         Erstellung von Patientenverfügungen, Vorsorgevollmachten und Generationenverträgen zur Absicherung.
                     </p>
                     <button @click="open = true" class="text-xs font-semibold uppercase tracking-widest text-kanzlei-greenLight group-hover:text-kanzlei-dark transition-colors flex items-center gap-2">
@@ -316,6 +358,7 @@
                         </div>
                     </template>
                 </div>
+
             </div>
         </div>
     </section>
